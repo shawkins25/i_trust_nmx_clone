@@ -93,7 +93,12 @@ export default function Home() {
           <div className={classes.section_1_video_container}>
             <div
               className="wistia_responsive_padding"
-              style={{ padding: "56.25% 0 0 0", position: "relative" }}
+              style={{
+                padding: "56.25% 0 0 0",
+                position: "relative",
+                color: "#006a39",
+                background: "#006a39",
+              }}
             >
               <div
                 className="wistia_responsive_wrapper"
@@ -102,16 +107,19 @@ export default function Home() {
                   left: 0,
                   position: "absolute",
                   top: 0,
-                  width: "100%",
+                  width: "100%"
                 }}
               >
                 <iframe
-                  src="https://fast.wistia.net/embed/iframe/sgxwp447y5?color=006a39"
+                  src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
                   title="Wistia video player"
                   allow="autoplay; fullscreen"
                   allowFullScreen
                   frameBorder="0"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                  }}
                 ></iframe>
               </div>
             </div>
