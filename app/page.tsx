@@ -111,7 +111,7 @@ export default function Home() {
                   allow="autoplay; fullscreen"
                   allowFullScreen
                   frameBorder="0"
-                  style={{ width: "100%", height: "100%" }}
+                  style={{ width: "100%", height: "100%", color: "#006a39" }}
                 ></iframe>
               </div>
             </div>
