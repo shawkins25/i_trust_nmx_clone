@@ -97,6 +97,8 @@ a.secondary {
 
 .section_1_content_container p {
   width: 75%;
+  font-size: 1.25rem;
+  font-weight: 400;
   margin: 3% auto;
 }
 
@@ -120,6 +122,11 @@ a.secondary {
   text-align: center;
   width: 90%;
   margin: 12% auto 5% auto;
+}
+
+.section_2_content_container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
 }
 
 .section_2_content_container h4 {
@@ -500,12 +507,16 @@ a.secondary {
     margin: 7% auto;
   }
 
+  .section_2_content_container h2 {
+    margin: 3% 0;
+  }
+
   .section_2_content_container h4 {
     margin: 3% auto;
   }
 
   .section_2_content_container p {
-    margin: 0 auto 2% auto;
+    margin: 3% auto 7% auto;
   }
 
   .section_2_content_container {

@@ -259,7 +259,7 @@ export default function Home() {
                       <h3>{item.name}</h3>
                       <h4>{item.title}</h4>
                       <h5>{item.location}</h5>
-                      <p>{item.quote}</p>
+                      <p>{`"${item.quote}"`}</p>
                     </div>
                   </div>
                 ))}
@@ -309,6 +309,7 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <h3>Discover the Nutramax Difference for Yourself</h3>
           <Link
             className={classes.button}
             href="https://mynutramax.com/register/"
