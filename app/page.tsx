@@ -106,12 +106,12 @@ export default function Home() {
                 }}
               >
                 <iframe
-                  src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
+                  src="https://fast.wistia.net/embed/iframe/sgxwp447y5?color=006a39"
                   title="Wistia video player"
                   allow="autoplay; fullscreen"
                   allowFullScreen
                   frameBorder="0"
-                  style={{ width: "100%", height: "100%", color: "#006a39" }}
+                  style={{ width: "100%", height: "100%" }}
                 ></iframe>
               </div>
             </div>
