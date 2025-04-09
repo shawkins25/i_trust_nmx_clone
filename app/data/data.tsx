@@ -52,7 +52,7 @@ import {
       icon: trustedLogo,
       title: "Trusted",
       content:
-        `The #1 veterinarian-recommended company▼, leading the industry with high-quality pet supplements.`,
+        `The #1 veterinarian-recommended company ${<sup>▼</sup>}, leading the industry with high-quality pet supplements.`,
     },
     {
       icon: innovationLogo,

@@ -107,7 +107,7 @@ export default function Home() {
                   left: 0,
                   position: "absolute",
                   top: 0,
-                  width: "100%"
+                  width: "100%",
                 }}
               >
                 <iframe
@@ -305,11 +305,20 @@ export default function Home() {
                   />
                 </div>
                 <h3>{item.title}</h3>
-                <p>{item.content}</p>
+                {item.title === "Trusted" ? (
+                  <p>
+                    The #1 veterinarian-recommended company{<sup>▼</sup>},
+                    leading the industry with high-quality pet supplements.
+                  </p>
+                ) : (
+                  <p>{item.content}</p>
+                )}
               </div>
             ))}
           </div>
-          <h3>Discover the Nutramax Difference for Yourself</h3>
+          <h3 className={classes.discover_header}>
+            Discover the Nutramax Difference for Yourself
+          </h3>
           <Link
             className={classes.button}
             href="https://mynutramax.com/register/"
@@ -322,8 +331,8 @@ export default function Home() {
       <footer className={classes.footer}>
         <div className={classes.inner_footer_container}>
           <p>
-            ▼ Source: Survey conducted among small animal veterinarians who
-            recommended animal health supplements.
+            {<sup>▼</sup>}Source: Survey conducted among small animal
+            veterinarians who recommended animal health supplements.
           </p>
           <div className={classes.footer_info_container}>
             {termsLinks.map((item) => (

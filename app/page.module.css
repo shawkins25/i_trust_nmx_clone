@@ -391,6 +391,12 @@ a.secondary {
   max-width: 185px;
 }
 
+.discover_header{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
