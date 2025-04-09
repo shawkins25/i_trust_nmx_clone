@@ -77,7 +77,7 @@ export default function Home() {
               Join Our Clinic Staff Program
             </Link>
           </div>
-          <div className={classes.section_1_video_container}>
+          {/* <div className={classes.section_1_video_container}>
             <video
               className={classes.section_1_video_img}
               width="100%"
@@ -89,6 +89,36 @@ export default function Home() {
               <source src={"/I_Trust_Nutramax_Video.mp4"} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+          </div> */}
+          <div className={classes.section_1_video_container}>
+            <div
+              className="wistia_responsive_padding"
+              style={{ padding: "56.25% 0 0 0", position: "relative" }}
+            >
+              <div
+                className="wistia_responsive_wrapper"
+                style={{
+                  height: "100%",
+                  left: 0,
+                  position: "absolute",
+                  top: 0,
+                  width: "100%",
+                }}
+              >
+                <iframe
+                  src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
+                  title="Wistia video player"
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  frameBorder="0"
+                  style={{ width: "100%", height: "100%" }}
+                ></iframe>
+              </div>
+            </div>
+            <script
+              src="https://fast.wistia.com/assets/external/E-v1.js"
+              async
+            ></script>
           </div>
         </section>
         <section className={classes.section_2}>
