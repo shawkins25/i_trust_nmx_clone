@@ -173,7 +173,11 @@ export default function Home() {
             </fieldset>
           </div>
         </section>
-        <section className={classes.section_3}>
+        <Link
+          className={classes.section_3}
+          href="https://mynutramax.com/register/"
+          target="_blank"
+        >
           {/* <Image
             className={classes.section_3_img}
             src="/CSP_BG.webp"
@@ -194,7 +198,7 @@ export default function Home() {
               Sign Up
             </Link>
           </div>
-        </section>
+        </Link>
         <section id="testimonials" className={classes.section_4}>
           <div className={classes.section_4_content_container}>
             <h3>Recommended by Veterinary Professionals</h3>
