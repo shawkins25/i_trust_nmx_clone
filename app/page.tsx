@@ -71,7 +71,7 @@ export default function Home() {
             </p>
             <Link
               className={classes.button}
-              href="https://mynutramax.com/register/"
+              href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_cta"
               target="_blank"
             >
               Join Our Clinic Staff Program
@@ -175,7 +175,7 @@ export default function Home() {
         </section>
         <Link
           className={classes.section_3}
-          href="https://mynutramax.com/register/"
+          href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_banner"
           target="_blank"
         >
           {/* <Image
@@ -192,7 +192,7 @@ export default function Home() {
             <h4>Sign up now and enjoy 15% off items for your personal pets.</h4>
             <Link
               className={classes.sign_up_button}
-              href="https://mynutramax.com/register/"
+              href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_banner"
               target="_blank"
             >
               Sign Up
@@ -325,7 +325,7 @@ export default function Home() {
           </h3>
           <Link
             className={classes.button}
-            href="https://mynutramax.com/register/"
+            href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_cta"
             target="_blank"
           >
             Join Our Clinic Staff Program
