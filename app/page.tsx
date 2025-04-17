@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import classes from "./page.module.css";
 import Link from "next/link";
 import {
@@ -57,10 +57,13 @@ export default function Home() {
                 className={classes.section_1_logo_img}
                 src="/I_Trust_NMX_Logo.webp"
                 alt="I Trust Nutramax logo"
-                objectFit="cover"
                 fill
                 priority
-              />
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  objectFit: "cover"
+                }} />
             </div>
             <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
             <p>
@@ -151,9 +154,12 @@ export default function Home() {
                   className={classes.infographic_img}
                   src={selectedInfographic.img}
                   alt={`Infographic of ${selectedInfographic.id}`}
-                  objectFit="cover"
                   fill
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }} />
               </div>
             )}
             <fieldset className={classes.animal_radio_group}>
@@ -214,9 +220,12 @@ export default function Home() {
                   className={classes.testimonial_img}
                   src={vetProfessionals[currentIndex].img}
                   alt={`Image of ${vetProfessionals[currentIndex].name}`}
-                  objectFit="cover"
                   fill
-                />
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    objectFit: "cover"
+                  }} />
               </div>
               <div className={classes.testimonial_content_container}>
                 <h3>{vetProfessionals[currentIndex].name}</h3>
@@ -255,9 +264,12 @@ export default function Home() {
                         className={classes.testimonial_img}
                         src={item.img}
                         alt={`Image of ${item.name}`}
-                        objectFit="cover"
                         fill
-                      />
+                        style={{
+                          maxWidth: "100%",
+                          height: "auto",
+                          objectFit: "cover"
+                        }} />
                     </div>
                     <div className={classes.testimonial_content_container}>
                       <h3>{item.name}</h3>
@@ -304,9 +316,12 @@ export default function Home() {
                     className={classes.icon_img}
                     src={item.icon}
                     alt={item.title}
-                    objectFit="cover"
                     fill
-                  />
+                    style={{
+                      maxWidth: "100%",
+                      height: "auto",
+                      objectFit: "cover"
+                    }} />
                 </div>
                 <h3>{item.title}</h3>
                 {item.title === "Trusted" ? (
