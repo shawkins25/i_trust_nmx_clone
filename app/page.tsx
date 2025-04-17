@@ -59,11 +59,6 @@ export default function Home() {
                 alt="I Trust Nutramax logo"
                 fill
                 priority
-                // style={{
-                //   maxWidth: "100%",
-                //   height: "auto",
-                //   objectFit: "cover"
-                // }}
                 />
             </div>
             <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
@@ -81,19 +76,6 @@ export default function Home() {
               Join Our Clinic Staff Program
             </Link>
           </div>
-          {/* <div className={classes.section_1_video_container}>
-            <video
-              className={classes.section_1_video_img}
-              width="100%"
-              controls
-              poster="/Video_Placeholder.png"
-              preload="none"
-              autoPlay
-            >
-              <source src={"/I_Trust_Nutramax_Video.mp4"} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div> */}
           <div className={classes.section_1_video_container}>
             <div
               className="wistia_responsive_padding"
@@ -156,11 +138,6 @@ export default function Home() {
                   src={selectedInfographic.img}
                   alt={`Infographic of ${selectedInfographic.id}`}
                   fill
-                  // style={{
-                  //   maxWidth: "100%",
-                  //   height: "auto",
-                  //   objectFit: "cover"
-                  // }} 
                   />
               </div>
             )}
@@ -186,22 +163,12 @@ export default function Home() {
           href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_banner"
           target="_blank"
         >
-          {/* <Image
-            className={classes.section_3_img}
-            src="/CSP_BG.webp"
-            alt="Clinic Staff Program Infographic"
-            objectFit="cover"
-            objectPosition="bottom"
-            fill
-          /> */}
           <div className={classes.section_3_content}>
             <h2>Clinic Staff</h2>
             <h3>program</h3>
             <h4>Sign up now and enjoy 15% off items for your personal pets.</h4>
             <div
               className={classes.sign_up_button}
-              // href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_banner"
-              // target="_blank"
             >
               Sign Up
             </div>
@@ -223,11 +190,6 @@ export default function Home() {
                   src={vetProfessionals[currentIndex].img}
                   alt={`Image of ${vetProfessionals[currentIndex].name}`}
                   fill
-                  // style={{
-                  //   maxWidth: "100%",
-                  //   height: "auto",
-                  //   objectFit: "cover"
-                  // }} 
                   />
               </div>
               <div className={classes.testimonial_content_container}>
@@ -268,11 +230,6 @@ export default function Home() {
                         src={item.img}
                         alt={`Image of ${item.name}`}
                         fill
-                        // style={{
-                        //   maxWidth: "100%",
-                        //   height: "auto",
-                        //   objectFit: "cover"
-                        // }} 
                         />
                     </div>
                     <div className={classes.testimonial_content_container}>
@@ -321,11 +278,6 @@ export default function Home() {
                     src={item.icon}
                     alt={item.title}
                     fill
-                    // style={{
-                    //   maxWidth: "100%",
-                    //   height: "auto",
-                    //   objectFit: "cover"
-                    // }} 
                     />
                 </div>
                 <h3>{item.title}</h3>
