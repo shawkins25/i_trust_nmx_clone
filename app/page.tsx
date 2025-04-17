@@ -59,11 +59,12 @@ export default function Home() {
                 alt="I Trust Nutramax logo"
                 fill
                 priority
-                style={{
-                  maxWidth: "100%",
-                  height: "auto",
-                  objectFit: "cover"
-                }} />
+                // style={{
+                //   maxWidth: "100%",
+                //   height: "auto",
+                //   objectFit: "cover"
+                // }}
+                />
             </div>
             <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
             <p>
@@ -155,11 +156,12 @@ export default function Home() {
                   src={selectedInfographic.img}
                   alt={`Infographic of ${selectedInfographic.id}`}
                   fill
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    objectFit: "cover"
-                  }} />
+                  // style={{
+                  //   maxWidth: "100%",
+                  //   height: "auto",
+                  //   objectFit: "cover"
+                  // }} 
+                  />
               </div>
             )}
             <fieldset className={classes.animal_radio_group}>
@@ -221,11 +223,12 @@ export default function Home() {
                   src={vetProfessionals[currentIndex].img}
                   alt={`Image of ${vetProfessionals[currentIndex].name}`}
                   fill
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    objectFit: "cover"
-                  }} />
+                  // style={{
+                  //   maxWidth: "100%",
+                  //   height: "auto",
+                  //   objectFit: "cover"
+                  // }} 
+                  />
               </div>
               <div className={classes.testimonial_content_container}>
                 <h3>{vetProfessionals[currentIndex].name}</h3>
@@ -265,11 +268,12 @@ export default function Home() {
                         src={item.img}
                         alt={`Image of ${item.name}`}
                         fill
-                        style={{
-                          maxWidth: "100%",
-                          height: "auto",
-                          objectFit: "cover"
-                        }} />
+                        // style={{
+                        //   maxWidth: "100%",
+                        //   height: "auto",
+                        //   objectFit: "cover"
+                        // }} 
+                        />
                     </div>
                     <div className={classes.testimonial_content_container}>
                       <h3>{item.name}</h3>
@@ -317,11 +321,12 @@ export default function Home() {
                     src={item.icon}
                     alt={item.title}
                     fill
-                    style={{
-                      maxWidth: "100%",
-                      height: "auto",
-                      objectFit: "cover"
-                    }} />
+                    // style={{
+                    //   maxWidth: "100%",
+                    //   height: "auto",
+                    //   objectFit: "cover"
+                    // }} 
+                    />
                 </div>
                 <h3>{item.title}</h3>
                 {item.title === "Trusted" ? (
