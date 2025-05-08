@@ -2,21 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useState } from "react";
 import classes from "./section1.module.css";
 
 const Section1 = () => {
-  useEffect(() => {
-    const existingScript = document.querySelector(
-      'script[src="https://fast.wistia.com/assets/external/E-v1.js"]'
-    );
-    if (!existingScript) {
-      const script = document.createElement("script");
-      script.src = "https://fast.wistia.com/assets/external/E-v1.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
+  const [showVideo, setShowVideo] = useState(false);
+
+//   useEffect(() => {
+//     const existingScript = document.querySelector(
+//       'script[src="https://fast.wistia.com/assets/external/E-v1.js"]'
+//     );
+//     if (!existingScript) {
+//       const script = document.createElement("script");
+//       script.src = "https://fast.wistia.com/assets/external/E-v1.js";
+//       script.async = true;
+//       document.body.appendChild(script);
+//     }
+//   }, []);
 
   return (
     <section className={classes.section_1}>
@@ -39,8 +41,6 @@ const Section1 = () => {
           width={250}
           height={134}
           priority
-          placeholder="blur"
-          blurDataURL="/I_Trust_NMX_Logo_Blur.png"
         />
         <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
         <p>
@@ -58,38 +58,23 @@ const Section1 = () => {
         </Link>
       </div>
       <div className={classes.section_1_video_container}>
-        <div
-          className="wistia_responsive_padding"
-          style={{
-            padding: "56.25% 0 0 0",
-            position: "relative",
-            color: "#006a39",
-            background: "#006a39",
-          }}
-        >
-          <div
-            className="wistia_responsive_wrapper"
-            style={{
-              height: "100%",
-              left: 0,
-              position: "absolute",
-              top: 0,
-              width: "100%",
-            }}
-          >
-            <iframe
-              src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
-              title="Wistia video player"
-              allow="autoplay; fullscreen"
-              allowFullScreen
-              frameBorder="0"
-              style={{
-                width: "100%",
-                height: "100%",
-              }}
-            ></iframe>
-          </div>
-        </div>
+        {!showVideo ? (
+          <Image
+            src="/Video_Placeholder.png"
+            alt="Play Video"
+            fill
+            priority
+            onClick={() => setShowVideo(true)}
+            style={{ cursor: "pointer", objectFit: "cover" }}
+          />
+        ) : (
+          <iframe
+            src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
+            allow="autoplay; fullscreen"
+            allowFullScreen
+            style={{ width: "100%", height: "100%" }}
+          />
+        )}
       </div>
     </section>
   );
