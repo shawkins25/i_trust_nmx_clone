@@ -8,18 +8,6 @@ import classes from "./section1.module.css";
 const Section1 = () => {
   const [showVideo, setShowVideo] = useState(false);
 
-//   useEffect(() => {
-//     const existingScript = document.querySelector(
-//       'script[src="https://fast.wistia.com/assets/external/E-v1.js"]'
-//     );
-//     if (!existingScript) {
-//       const script = document.createElement("script");
-//       script.src = "https://fast.wistia.com/assets/external/E-v1.js";
-//       script.async = true;
-//       document.body.appendChild(script);
-//     }
-//   }, []);
-
   return (
     <section className={classes.section_1}>
       <div className={classes.section_1_bg_img_container}>
