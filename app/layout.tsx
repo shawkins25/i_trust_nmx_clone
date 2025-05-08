@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  weight: ["300", "400", "600", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "I Trust Nutramax",
-  description: "I Trust Nutramax landing page",
+  description:
+    "Disdover why vet professionals recommend Nutramax supplements & experience the Nutramax difference yourself, by joining our clinic staff program today!",
 };
 
 export default function RootLayout({
@@ -12,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.className}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any"/>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body>{children}</body>
     </html>
