@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { vetProfessionals } from "./data/data";
-import classes from "./page.module.css";
+import classes from "./section4.module.css";
 import { useState } from "react";
 
 const Section4 = () => {

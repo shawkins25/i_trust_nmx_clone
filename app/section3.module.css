@@ -1,0 +1,85 @@
+.section_3 {
+    /* position: relative;
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 1.003; */
+    position: relative;
+    background-image: url("/CSP_BG.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 850px;
+    aspect-ratio: 1.003;
+  }
+  
+  .section_3_content {
+    display: none;
+  }
+
+  @media (min-width: 1280px) {
+    .section_3 {
+        position: relative;
+        background-image: url("/CSP_BG_Desktop_V2.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        max-width: 1215px;
+        aspect-ratio: 3.591;
+      }
+    
+      .section_3_content {
+        font-family: "Barlow Condensed", sans-serif;
+        position: absolute;
+        top: 45px;
+        right: 55px;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        color: var(--nmx-green);
+        width: 18%;
+      }
+    
+      .section_3_content h2 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 35px;
+        line-height: 35px;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+    
+      .section_3_content h3 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 33px;
+        line-height: 33px;
+        letter-spacing: 0;
+        font-weight: 400;
+        align-self: flex-end;
+        margin-right: 35px;
+      }
+    
+      .section_3_content h4 {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 27px;
+        font-weight: 600;
+      }
+    
+      .sign_up_button {
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0.5rem 1rem;
+        color: var(--white);
+        background-color: var(--nmx-green);
+        border-radius: 3px;
+        width: 90%;
+        font-weight: 700 !important;
+        max-width: 150px;
+        font-size: 1rem;
+        margin: 1rem 0;
+      }
+  }

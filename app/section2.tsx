@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import classes from "./page.module.css";
+import classes from "./section2.module.css";
 import { animalInfographicOptions } from "./data/data";
 import { useState } from "react";
 

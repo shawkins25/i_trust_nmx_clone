@@ -1,0 +1,225 @@
+.section_4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--off-white);
+  width: 100%;
+  padding: 0 0 10% 0;
+}
+
+.section_4_content_container,
+.section_4_testimonials_container_mobile,
+.section_4_testimonials_container_desktop {
+  width: 90%;
+}
+
+.section_4_content_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 8% auto;
+}
+
+.section_4_content_container h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 900;
+}
+
+.section_4_content_container h4 {
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  font-weight: 400;
+  margin: 5% auto;
+  max-width: 900px;
+}
+
+.testimonial_container,
+.testimonial_slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial_container h3,
+.testimonial_slide h3 {
+  font-size: clamp(1.15rem, 3vw, 1.5rem);
+  color: var(--nmx-green);
+  font-weight: 700;
+}
+
+.testimonial_container h4,
+.testimonial_slide h4 {
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  color: var(--nmx-green);
+  font-style: italic;
+  margin: 0.35rem 0 0.15rem 0;
+}
+
+.testimonial_container h5,
+.testimonial_slide h5 {
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(1rem, 2.25vw, 1.25rem);
+}
+
+.testimonial_container p,
+.testimonial_slide p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-weight: 400;
+  min-height: 75px;
+  margin: 0.5rem 0;
+}
+
+.testimonial_img_container {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 1;
+  max-width: 300px;
+}
+
+.testimonial_img {
+  border-radius: 50%;
+}
+
+.section_4_testimonials_container_mobile {
+  display: flex;
+  flex-direction: column;
+}
+
+.section_4_testimonials_container_desktop,
+.carousel_navigation_desktop {
+  display: none;
+}
+
+.slider_wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider_track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.testimonial_slide {
+  flex: 0 0 50%; /* Show 2 slides at a time */
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.carousel_navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.carousel_navigation button {
+  font-size: clamp(1rem, 2.25vw, 1.25rem);
+  font-weight: 300;
+  padding: 0 8px;
+  border: none;
+}
+
+.carousel_navigation_desktop button:hover {
+  cursor: pointer;
+}
+
+.active_dot {
+  font-weight: 700 !important;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .section_4 {
+    padding: 0 0 5% 0;
+  }
+
+  .section_4_content_container {
+    margin: 3% auto;
+  }
+
+  .testimonial_container,
+  .testimonial_slide {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+  }
+
+  .testimonial_img_container {
+    width: 40%;
+  }
+
+  .testimonial_content_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .testimonial_content_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section_4_content_container h4 {
+    margin: 2% auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section_4_testimonials_container_mobile {
+    display: none;
+  }
+
+  .section_4_testimonials_container_desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial_container,
+  .testimonial_slide {
+    width: 50%;
+  }
+
+  .inner_testimonials_container_desktop {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .testimonial_content_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel_navigation_desktop {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .carousel_navigation_desktop button {
+    border: none;
+    font-size: clamp(1rem, 2.25vw, 1.25rem);
+  }
+}

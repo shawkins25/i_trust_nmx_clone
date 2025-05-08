@@ -1,4 +1,14 @@
 :root {
+  --nmx-green: #006a39;
+  --header-color: #565656;
+  --font-color: #606060;
+  --white: #ffffff;
+  --off-white: #f0f0f0;
+  --footer-color: #696b6f;
+
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+
   --background: #ffffff;
   --foreground: #171717;
 }

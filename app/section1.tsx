@@ -3,10 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import classes from "./page.module.css";
+import classes from "./section1.module.css";
 
 const Section1 = () => {
-
   useEffect(() => {
     const existingScript = document.querySelector(
       'script[src="https://fast.wistia.com/assets/external/E-v1.js"]'
@@ -21,11 +20,22 @@ const Section1 = () => {
 
   return (
     <section className={classes.section_1}>
+      <div className={classes.section_1_bg_img_container}>
+        <Image
+          className={classes.section_1_bg_img}
+          src="/Section_1_BG_Mobile.webp"
+          alt="background image"
+          fill
+          priority
+          placeholder="blur"
+          blurDataURL="/Section_1_BG_Mobile_blur.png"
+        />
+      </div>
       <div className={classes.section_1_content_container}>
         <div className={classes.section_1_logo_img_container}>
           <Image
             className={classes.section_1_logo_img}
-            src="/I_Trust_NMX_Logo.webp"
+            src="/I_Trust_NMX_Logo_small.webp"
             alt="I Trust Nutramax logo"
             fill
             priority

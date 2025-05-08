@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import classes from "./page.module.css";
+import classes from "./section5.module.css";
 import { whyNutramaxIcons } from "./data/data";
 
 const Section5 = () => {

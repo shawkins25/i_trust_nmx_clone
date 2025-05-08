@@ -1,5 +1,5 @@
 import Link from "next/link"
-import classes from "./page.module.css"
+import classes from "./section3.module.css"
 
 const Section3 = () => {
   return (
