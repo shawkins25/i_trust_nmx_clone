@@ -39,15 +39,6 @@
   z-index: 0;
 }
 
-.section_1_logo_img_container {
-  position: relative;
-  width: 75%;
-  aspect-ratio: 1.872;
-  height: auto;
-  margin: 0 auto;
-  max-width: 250px;
-}
-
 .section_1_content_container {
   display: flex;
   align-items: center;

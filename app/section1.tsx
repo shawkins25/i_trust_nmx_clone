@@ -32,17 +32,16 @@ const Section1 = () => {
         />
       </div>
       <div className={classes.section_1_content_container}>
-        <div className={classes.section_1_logo_img_container}>
-          <Image
-            className={classes.section_1_logo_img}
-            src="/I_Trust_NMX_Logo_small.webp"
-            alt="I Trust Nutramax logo"
-            fill
-            priority
-            placeholder="blur"
-            blurDataURL="/I_Trust_NMX_Logo_Blur.png"
-          />
-        </div>
+        <Image
+          className={classes.section_1_logo_img}
+          src="/I_Trust_NMX_Logo_small.webp"
+          alt="I Trust Nutramax logo"
+          width={250}
+          height={134}
+          priority
+          placeholder="blur"
+          blurDataURL="/I_Trust_NMX_Logo_Blur.png"
+        />
         <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
         <p>
           For over 30 years, Nutramax Laboratories has been committed to
