@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -25,7 +25,11 @@ const Section2 = () => {
           From joint health to gastrointestinal support, trust Nutramax to
           support your patients’ well-being.
         </p>
-        <Link className={classes.button} href="#testimonials">
+        <Link
+          className={classes.button}
+          href="#testimonials"
+          aria-label="Discover what vets are saying about us!"
+        >
           Discover What Vets Are Saying
         </Link>
       </div>
@@ -39,7 +43,7 @@ const Section2 = () => {
               fill
               priority={false}
               placeholder="blur"
-            blurDataURL="/Dog_Diagram_Blur.png"
+              blurDataURL="/Dog_Diagram_Blur.png"
             />
           </div>
         )}
