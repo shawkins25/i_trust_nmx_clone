@@ -14,7 +14,7 @@ const Section2 = () => {
   );
 
   return (
-    <section className={classes.section_2}>
+    <div className={classes.section_2}>
       <div className={classes.section_2_content_container}>
         <h2>Versatile Wellness Support for Pets</h2>
         <h4>
@@ -59,7 +59,7 @@ const Section2 = () => {
           ))}
         </fieldset>
       </div>
-    </section>
+    </div>
   );
 };
 export default Section2;

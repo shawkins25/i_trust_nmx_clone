@@ -9,7 +9,7 @@ const Section1 = () => {
   const [showVideo, setShowVideo] = useState(false);
 
   return (
-    <section className={classes.section_1}>
+    <div className={classes.section_1}>
       <div className={classes.section_1_bg_img_container}>
         <Image
           className={classes.section_1_bg_img}
@@ -64,7 +64,7 @@ const Section1 = () => {
           />
         )}
       </div>
-    </section>
+    </div>
   );
 };
 export default Section1;

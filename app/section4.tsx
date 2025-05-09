@@ -37,7 +37,7 @@ const Section4 = () => {
   };
 
   return (
-    <section id="testimonials" className={classes.section_4}>
+    <div id="testimonials" className={classes.section_4}>
       <div className={classes.section_4_content_container}>
         <h3>Recommended by Veterinary Professionals</h3>
         <h4>
@@ -123,7 +123,7 @@ const Section4 = () => {
           <button onClick={handleNext}>&gt;</button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 export default Section4;

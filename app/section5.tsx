@@ -5,7 +5,7 @@ import { whyNutramaxIcons } from "./data/data";
 
 const Section5 = () => {
   return (
-    <section className={classes.section_5}>
+    <div className={classes.section_5}>
       <h3>Why Veterinary Professionals Trust Nutramax</h3>
       <div className={classes.section_5_icons_container}>
         {whyNutramaxIcons.map((item) => (
@@ -43,7 +43,7 @@ const Section5 = () => {
       >
         Join Our Clinic Staff Program
       </Link>
-    </section>
+    </div>
   );
 };
 export default Section5;
