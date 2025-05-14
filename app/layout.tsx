@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto } from "next/font/google";
+import Analytics from "./analytics";
 
 const roboto = Roboto({
   weight: ["300", "400", "600", "700", "900"],
@@ -12,7 +13,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "I Trust Nutramax",
   description:
-    "Disdover why vet professionals recommend Nutramax supplements & experience the Nutramax difference yourself, by joining our clinic staff program today!",
+    "Discover why vet professionals recommend Nutramax supplements & experience the Nutramax difference yourself by joining our clinic staff program today!",
 };
 
 export default function RootLayout({
@@ -25,7 +26,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body>{children}</body>
+      <body>
+        <Analytics />
+        {children}
+      </body>
     </html>
   );
 }
