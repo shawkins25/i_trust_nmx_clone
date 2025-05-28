@@ -27,7 +27,6 @@ export default function RootLayout({
     <html lang="en" className={roboto.className}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <meta name="google-site-verification" content="my-verification-code" />
       </head>
       <body>
         <Analytics />
