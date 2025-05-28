@@ -30,6 +30,8 @@ export default function RootLayout({
         <meta name="google-site-verification" content="my-verification-code" />
       </head>
       <body>
+        <Analytics />
+        <SpeedInsights />
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-insight" strategy="afterInteractive">
           {`
