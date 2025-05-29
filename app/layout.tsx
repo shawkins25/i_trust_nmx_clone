@@ -82,16 +82,24 @@ export default function RootLayout({
           src="https://js.adsrvr.org/up_loader.1.1.0.js"
           strategy="afterInteractive"
         />
-        <Script id="ttd-init" strategy="afterInteractive">
-          {`
-   ttd_dom_ready(function() {
-     if (typeof TTDUniversalPixelApi === 'function') {
-       var universalPixelApi = new TTDUniversalPixelApi();
-       universalPixelApi.init("h1yjpau", ["p112iqo"], "https://insight.adsrvr.org/track/up");
+        <Script id="ttd-init-wrapper" strategy="afterInteractive">
+ {`
+   // Wait until the loader script is available
+   function waitForTTDPixel(retries = 10) {
+     if (typeof ttd_dom_ready === "function" && typeof TTDUniversalPixelApi === "function") {
+       ttd_dom_ready(function () {
+         var universalPixelApi = new TTDUniversalPixelApi();
+         universalPixelApi.init("h1yjpau", ["p112iqo"], "https://insight.adsrvr.org/track/up");
+       });
+     } else if (retries > 0) {
+       setTimeout(() => waitForTTDPixel(retries - 1), 200);
+     } else {
+       console.error("Trade Desk pixel failed to load.");
      }
-   });
+   }
+   waitForTTDPixel();
  `}
-        </Script>
+</Script>
         {children}
       </body>
     </html>
