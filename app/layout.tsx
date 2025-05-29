@@ -76,6 +76,22 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=689892560456638&ev=PageView&noscript=1"
           />
         </noscript>
+        {/* Trade Desk Universal Pixel */}
+        <Script
+          id="ttd-loader"
+          src="https://js.adsrvr.org/up_loader.1.1.0.js"
+          strategy="afterInteractive"
+        />
+        <Script id="ttd-init" strategy="afterInteractive">
+          {`
+   ttd_dom_ready(function() {
+     if (typeof TTDUniversalPixelApi === 'function') {
+       var universalPixelApi = new TTDUniversalPixelApi();
+       universalPixelApi.init("h1yjpau", ["p112iqo"], "https://insight.adsrvr.org/track/up");
+     }
+   });
+ `}
+        </Script>
         {children}
       </body>
     </html>
