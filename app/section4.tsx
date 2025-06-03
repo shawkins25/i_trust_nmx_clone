@@ -41,7 +41,7 @@ const Section4 = () => {
       <div className={classes.section_4_content_container}>
         <h3>Recommended by Veterinary Professionals</h3>
         <h4>
-          {`Veterinarians don't just trust Nutramax—they confidently recommend it. From enhancing patient care to supporting quality of life, Nutramax is the #1 Veterinarian Recommended Supplement Company. See why these vets proudly say, "I Trust Nutramax."`}
+          {`Veterinarians don't just trust Nutramax—they confidently recommend it. From enhancing patient care to supporting quality of life, Nutramax is the #1 Veterinarian Recommended Supplement Company*. See why these vets proudly say, "I Trust Nutramax."`}
         </h4>
       </div>
       {/* Only one testimonial on mobile */}
