@@ -5,7 +5,7 @@ const Section3 = () => {
   return (
     <Link
       className={classes.section_3}
-      href="https://mynutramax.com/register/?utm_source=itrustnutramax_lp&utm_medium=Website&utm_campaign=itrust_banner"
+      href="https://mynutramax.com/register/"
       target="_blank"
       aria-label="Sign up for our clinic staff program to enjoy 15% off items for your personal pets"
     >
