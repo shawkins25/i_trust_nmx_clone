@@ -33,7 +33,8 @@ export default function RootLayout({
         <SpeedInsights />
         {/* UTM Tag */}
         <Script id="utm-tracker" strategy="afterInteractive">
-          {`(function () {
+  {`
+    (function () {
       function getUTMParams() {
         const params = new URLSearchParams(window.location.search);
         const utmParams = new URLSearchParams();
@@ -49,21 +50,33 @@ export default function RootLayout({
         const utmString = getUTMParams();
         if (!utmString) return;
 
-        const buttons = document.querySelectorAll('a[href="https://mynutramaxlabs.com/register"]');
-        buttons.forEach(button => {
-          const url = new URL(button.href);
-          utmString.split('&').forEach(pair => {
-            const [key, value] = pair.split('=');
-            if (key && value) url.searchParams.set(key, value);
-          });
-          button.href = url.toString();
+        const links = document.querySelectorAll('a[href*="mynutramaxlabs.com/register"]');
+
+        links.forEach(link => {
+          try {
+            const url = new URL(link.href);
+            if (url.hostname.includes("mynutramaxlabs.com") && url.pathname === "/register") {
+              utmString.split('&').forEach(pair => {
+                const [key, value] = pair.split('=');
+                if (key && value) url.searchParams.set(key, value);
+              });
+              link.href = url.toString();
+            }
+          } catch (e) {
+            console.warn("Invalid link found for UTM appending", link.href);
+          }
         });
       }
 
-      document.addEventListener("DOMContentLoaded", appendUTMParams);
+      if (document.readyState === "complete" || document.readyState === "interactive") {
+        appendUTMParams();
+      } else {
+        document.addEventListener("DOMContentLoaded", appendUTMParams);
+      }
     })();
   `}
-        </Script>
+</Script>
+
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-init" strategy="afterInteractive">
           {`_linkedin_partner_id = "7274042";
