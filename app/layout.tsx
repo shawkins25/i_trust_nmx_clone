@@ -31,6 +31,39 @@ export default function RootLayout({
       <body>
         <Analytics />
         <SpeedInsights />
+        {/* UTM Tag */}
+        <Script id="utm-tracker" strategy="afterInteractive">
+          {`(function () {
+      function getUTMParams() {
+        const params = new URLSearchParams(window.location.search);
+        const utmParams = new URLSearchParams();
+        ['utm_source', 'utm_medium', 'utm_campaign', 'ref'].forEach(param => {
+          if (params.has(param)) {
+            utmParams.set(param, params.get(param));
+          }
+        });
+        return utmParams.toString();
+      }
+
+      function appendUTMParams() {
+        const utmString = getUTMParams();
+        if (!utmString) return;
+
+        const buttons = document.querySelectorAll('a[href="https://mynutramaxlabs.com/register"]');
+        buttons.forEach(button => {
+          const url = new URL(button.href);
+          utmString.split('&').forEach(pair => {
+            const [key, value] = pair.split('=');
+            if (key && value) url.searchParams.set(key, value);
+          });
+          button.href = url.toString();
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", appendUTMParams);
+    })();
+  `}
+        </Script>
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-init" strategy="afterInteractive">
           {`_linkedin_partner_id = "7274042";
@@ -87,22 +120,20 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script id="ttd-init-wrapper" strategy="afterInteractive">
-          {`
-   // Wait until the loader script is available
-   function waitForTTDPixel(retries = 10) {
-     if (typeof ttd_dom_ready === "function" && typeof TTDUniversalPixelApi === "function") {
-       ttd_dom_ready(function () {
-         var universalPixelApi = new TTDUniversalPixelApi();
-         universalPixelApi.init("h1yjpau", ["p112iqo"], "https://insight.adsrvr.org/track/up");
-       });
-     } else if (retries > 0) {
-       setTimeout(() => waitForTTDPixel(retries - 1), 200);
-     } else {
-       console.error("Trade Desk pixel failed to load.");
-     }
-   }
-   waitForTTDPixel();
- `}
+          {`// Wait until the loader script is available
+            function waitForTTDPixel(retries = 10) {
+              if (typeof ttd_dom_ready === "function" && typeof TTDUniversalPixelApi === "function") {
+                ttd_dom_ready(function () {
+                  var universalPixelApi = new TTDUniversalPixelApi();
+                  universalPixelApi.init("h1yjpau", ["p112iqo"], "https://insight.adsrvr.org/track/up");
+                });
+              } else if (retries > 0) {
+                setTimeout(() => waitForTTDPixel(retries - 1), 200);
+              } else {
+                console.error("Trade Desk pixel failed to load.");
+              }
+            }
+            waitForTTDPixel();`}
         </Script>
         {children}
       </body>
