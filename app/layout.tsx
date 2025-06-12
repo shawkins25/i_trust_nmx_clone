@@ -33,49 +33,49 @@ export default function RootLayout({
         <SpeedInsights />
         {/* UTM Tag */}
         <Script id="utm-tracker" strategy="afterInteractive">
-  {`
-    (function () {
-      function getUTMParams() {
-        const params = new URLSearchParams(window.location.search);
-        const utmParams = new URLSearchParams();
-        ['utm_source', 'utm_medium', 'utm_campaign', 'ref'].forEach(param => {
-          if (params.has(param)) {
-            utmParams.set(param, params.get(param));
+          {`
+  (function () {
+    function getUTMParams() {
+      const params = new URLSearchParams(window.location.search);
+      const utmParams = new URLSearchParams();
+      ['utm_source', 'utm_medium', 'utm_campaign', 'ref'].forEach(param => {
+        if (params.has(param)) {
+          utmParams.set(param, params.get(param));
+        }
+      });
+      return utmParams.toString();
+    }
+
+    function appendUTMParams() {
+      const utmString = getUTMParams();
+      if (!utmString) return;
+
+      const links = document.querySelectorAll('a[href*="mynutramax.com/register"]');
+
+      links.forEach(link => {
+        try {
+          const url = new URL(link.href);
+          if (url.hostname.includes("mynutramax.com") && url.pathname === "/register") {
+            utmString.split('&').forEach(pair => {
+              const [key, value] = pair.split('=');
+              if (key && value) url.searchParams.set(key, value);
+            });
+            link.href = url.toString();
           }
-        });
-        return utmParams.toString();
-      }
+        } catch (e) {
+          console.warn("Invalid link found for UTM appending", link.href);
+        }
+      });
+    }
 
-      function appendUTMParams() {
-        const utmString = getUTMParams();
-        if (!utmString) return;
-
-        const links = document.querySelectorAll('a[href*="mynutramaxlabs.com/register"]');
-
-        links.forEach(link => {
-          try {
-            const url = new URL(link.href);
-            if (url.hostname.includes("mynutramaxlabs.com") && url.pathname === "/register") {
-              utmString.split('&').forEach(pair => {
-                const [key, value] = pair.split('=');
-                if (key && value) url.searchParams.set(key, value);
-              });
-              link.href = url.toString();
-            }
-          } catch (e) {
-            console.warn("Invalid link found for UTM appending", link.href);
-          }
-        });
-      }
-
-      if (document.readyState === "complete" || document.readyState === "interactive") {
-        appendUTMParams();
-      } else {
-        document.addEventListener("DOMContentLoaded", appendUTMParams);
-      }
-    })();
-  `}
-</Script>
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      appendUTMParams();
+    } else {
+      document.addEventListener("DOMContentLoaded", appendUTMParams);
+    }
+  })();
+`}
+        </Script>
 
         {/* LinkedIn Insight Tag */}
         <Script id="linkedin-init" strategy="afterInteractive">
