@@ -58,7 +58,7 @@
   color: var(--nmx-green);
 }
 
-.light-green {
+.light_green {
   color: var(--light-green);
 }
 
@@ -143,8 +143,6 @@
 
   .section_1_content_container {
     align-self: flex-start;
-    text-align: start;
-    align-items: flex-start;
     width: 55%;
   }
 
@@ -173,11 +171,12 @@
 @media (min-width: 1280px) {
   .section_1 {
     flex-direction: row;
+    align-items: flex-end;
     background-image: url("/Section_1_BG_Desktop_new.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    gap: 2rem;
+    gap: 4rem;
     min-height: 75vh;
     border-bottom: 4px solid var(--nmx-green);
     padding: 2rem;
@@ -188,12 +187,13 @@
   }
 
   .section_1_content_container {
+    padding: 0;
     width: 50%;
   }
 
   .section_1_content_container h1 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    line-height: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: clamp(1.5rem, 3vw, 2.5rem);
     margin: 2rem 0;
     max-width: 500px;
   }
@@ -204,7 +204,7 @@
 
   .section_1_video_container {
     margin: 0;
-    width: 50%;
+    width: 40%;
   }
 
   .section_1_video_img {
