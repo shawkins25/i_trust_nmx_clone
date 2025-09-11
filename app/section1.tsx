@@ -37,13 +37,18 @@ const Section1 = () => {
           veterinarians trust for their patients. Now, you can experience that
           same trusted quality with your own pets.
         </p>
+        <p>
+          Now we're celebrating the trust you put in Nutramax for your patients
+          and your own pets with your chance to win an onsite celebration for
+          your own clinic, Nutramax swag, products, and more!
+        </p>
         <Link
           className={classes.button}
-          href="https://mynutramax.com/register"
+          href="https://contact.mynutramaxlabs.com/i-trust-sweepstakes"
           target="_blank"
-          aria-label="Sign up for our clinic staff program to enjoy 15% off items for your personal pets"
+          aria-label="Enter I Trust Nutramax Sweepstakes now!"
         >
-          Join Our Clinic Staff Program
+          ENTER SWEEPSTAKES NOW
         </Link>
       </div>
       <div className={classes.section_1_video_container}>
