@@ -11,18 +11,18 @@
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    color: var(--white);
-    background-color: var(--nmx-green);
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    font-size: clamp(1.15rem, 3vw, 1.25rem);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--nmx-green);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  font-size: clamp(1.15rem, 3vw, 1.25rem);
+}
 
 .section_1_bg_img_container {
   position: absolute;

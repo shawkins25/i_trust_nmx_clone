@@ -13,7 +13,7 @@ const Section1 = () => {
       <div className={classes.section_1_bg_img_container}>
         <Image
           className={classes.section_1_bg_img}
-          src="/Section_1_BG_Mobile.webp"
+          src="/Section_1_BG_Mobile_new.webp"
           alt="background image"
           fill
           priority
