@@ -32,7 +32,7 @@ const Section1 = () => {
         />
         <h1>
           Celebrated the Trusted Choice With the{" "}
-          <span className={"light-green"}>'I Trust Nutramax'</span> Sweepstakes
+          <span className={"light-green"}>&apos;I Trust Nutramax&apos;</span> Sweepstakes
         </h1>
         <p>
           For over 30 years, Nutramax Laboratories has been committed to
