@@ -38,7 +38,7 @@ const Section1 = () => {
           same trusted quality with your own pets.
         </p>
         <p>
-          Now we're celebrating the trust you put in Nutramax for your patients
+          Now we&apos;re celebrating the trust you put in Nutramax for your patients
           and your own pets with your chance to win an onsite celebration for
           your own clinic, Nutramax swag, products, and more!
         </p>
