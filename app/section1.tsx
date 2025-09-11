@@ -30,7 +30,10 @@ const Section1 = () => {
           height={134}
           priority
         />
-        <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
+        <h1>
+          Celebrated the Trusted Choice With the{" "}
+          <span className={"light-green"}>'I Trust Nutramax'</span> Sweepstakes
+        </h1>
         <p>
           For over 30 years, Nutramax Laboratories has been committed to
           exceptional quality, rigorous research, and innovative solutions that
@@ -38,9 +41,9 @@ const Section1 = () => {
           same trusted quality with your own pets.
         </p>
         <p>
-          Now we&apos;re celebrating the trust you put in Nutramax for your patients
-          and your own pets with your chance to win an onsite celebration for
-          your own clinic, Nutramax swag, products, and more!
+          Now we&apos;re celebrating the trust you put in Nutramax for your
+          patients and your own pets with your chance to win an onsite
+          celebration for your own clinic, Nutramax swag, products, and more!
         </p>
         <Link
           className={classes.button}

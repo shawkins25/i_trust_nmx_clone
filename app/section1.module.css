@@ -55,6 +55,11 @@
   line-height: 1.75rem;
   margin: 5% auto 2% auto;
   max-width: 500px;
+  color: var(--nmx-green);
+}
+
+.light-green {
+  color: var(--light-green);
 }
 
 .section_1_content_container p {
