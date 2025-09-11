@@ -82,7 +82,7 @@
   }
 
   .section_1 {
-    background-image: url("/Section_1_BG_Mobile_Adjusted.webp");
+    background-image: url("/Section_1_BG_Mobile_Adjusted_new.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -99,7 +99,7 @@
 
 @media (min-width: 768px) {
   .section_1 {
-    background-image: url("/Section_1_BG_Mobile_2.webp");
+    background-image: url("/Section_1_BG_Mobile_2_new.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -129,7 +129,7 @@
 
 @media (min-width: 1024px) {
   .section_1 {
-    background-image: url("/Section_1_BG_iPad.webp");
+    background-image: url("/Section_1_BG_Mobile_2_new.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -167,7 +167,7 @@
 @media (min-width: 1280px) {
   .section_1 {
     flex-direction: row;
-    background-image: url("/Section_1_BG_Desktop.webp");
+    background-image: url("/Section_1_BG_Desktop_new.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
