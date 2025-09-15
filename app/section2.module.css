@@ -86,6 +86,10 @@
     margin-top: 2%;
   }
 
+  .button {
+    margin: 12px auto 0 auto;
+  }
+
 @media (min-width: 768px) {
     .section_2 {
         width: 90%;
@@ -100,10 +104,6 @@
         margin: 0;
       }
     
-      .section_2_content_container {
-        margin: 7% auto;
-      }
-    
       .section_2_content_container h2 {
         margin: 3% 0;
       }
@@ -113,7 +113,7 @@
       }
     
       .section_2_content_container p {
-        margin: 3% auto 7% auto;
+        margin: 2% auto;
       }
     
       .section_2_content_container {
@@ -127,14 +127,13 @@
       }
     
       .section_2_content_container {
-        margin: 3% auto;
+        margin: 2% auto;
       }
 }
 
 @media (min-width: 1280px) {
     .section_2 {
         flex-direction: row;
-        margin: 0;
       }
     
       .section_2_content_container {

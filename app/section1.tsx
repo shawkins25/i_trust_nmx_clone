@@ -1,12 +1,12 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 import classes from "./section1.module.css";
 
 const Section1 = () => {
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
 
   return (
     <div className={classes.section_1}>
@@ -68,12 +68,12 @@ const Section1 = () => {
             style={{ cursor: "pointer", objectFit: "cover" }}
           />
         ) : ( */}
-          <iframe
-            src="https://fast.wistia.net/embed/iframe/k4jnc8u8x8?web_component=true&seo=true"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            style={{ width: "98.5%", height: "100%" }}
-          />
+        <iframe
+          src="https://fast.wistia.net/embed/iframe/k4jnc8u8x8?web_component=true&seo=true"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          style={{ width: "98.5%", height: "100%" }}
+        />
         {/* )} */}
       </div>
     </div>
