@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--off-white);
+  /* background-color: var(--off-white); */
   width: 100%;
   padding: 0 0 10% 0;
 }
