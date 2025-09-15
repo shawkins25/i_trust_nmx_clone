@@ -57,7 +57,7 @@ const Section1 = () => {
       <div className={classes.section_1_video_container}>
         {!showVideo ? (
           <Image
-            src="/Video_Placeholder.png"
+            src="/i_trust_thumbpng"
             alt="Play Video"
             fill
             priority
@@ -66,7 +66,7 @@ const Section1 = () => {
           />
         ) : (
           <iframe
-            src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
+            src="https://nutramaxlabs.wistia.com/medias/k4jnc8u8x8"
             allow="autoplay; fullscreen"
             allowFullScreen
             style={{ width: "100%", height: "100%" }}
