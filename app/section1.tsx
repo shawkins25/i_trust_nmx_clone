@@ -8,6 +8,8 @@ import classes from "./section1.module.css";
 const Section1 = () => {
   const [showVideo, setShowVideo] = useState(false);
 
+  console.log("test");
+
   return (
     <div className={classes.section_1}>
       <div className={classes.section_1_bg_img_container}>
