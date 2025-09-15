@@ -31,7 +31,7 @@ const Section1 = () => {
           priority
         />
         <h1 className={classes.light_green}>
-          We're Celebrating Being Your Trusted Choice
+          We&apos;re Celebrating Being Your Trusted Choice
         </h1>
         <h2>With Prizes For You and Your Clinic</h2>
         <p>
