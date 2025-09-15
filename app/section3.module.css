@@ -21,6 +21,11 @@
   align-items: center;
   padding: 20px 0;
 }
+
+.section1 h2 {
+  text-transform: uppercase;
+  color: #dd2f85;
+}
 /* Section 2 stacks image, then quote+signature */
 .section2 {
   position: relative;
