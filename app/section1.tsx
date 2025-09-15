@@ -57,7 +57,7 @@ const Section1 = () => {
       <div className={classes.section_1_video_container}>
         {!showVideo ? (
           <Image
-            src="/i_trust_thumbpng"
+            src="/i_trust_thumb.png"
             alt="Play Video"
             fill
             priority
