@@ -30,13 +30,10 @@ const Section1 = () => {
           height={134}
           priority
         />
-        <h1>
-          Celebrated the Trusted Choice With the{" "}
-          <span className={classes.light_green}>
-            &apos;I Trust Nutramax&apos;
-          </span>{" "}
-          Sweepstakes
+        <h1 className={classes.light_green}>
+          We're Celebrating Being Your Trusted Choice
         </h1>
+        <h2>With Prizes For You and Your Clinic</h2>
         <p>
           For over 30 years, Nutramax Laboratories has been committed to
           exceptional quality, rigorous research, and innovative solutions that
