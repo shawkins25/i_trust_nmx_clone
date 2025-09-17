@@ -2,7 +2,6 @@ import classes from "./page.module.css";
 import Link from "next/link";
 import { termsLinks } from "./data/data";
 import dynamic from "next/dynamic";
-import { animalInfographicOptions } from "./data/data";
 
 const Section1 = dynamic(() => import("./section1"), { ssr: true });
 const Section2 = dynamic(() => import("./section2"), { ssr: true });
