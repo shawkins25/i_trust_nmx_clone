@@ -52,48 +52,92 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           "data-linkedin": "7274042",
         })}
         {/* UTM Tag (KEEPING as requested) */}
-        <Script id="utm-tracker" strategy="afterInteractive">
-          {`
+        <Script id="utm-propagate" strategy="afterInteractive">{`
 (function () {
- function getUTMParams() {
-   const params = new URLSearchParams(window.location.search);
-   const utmParams = new URLSearchParams();
-   ['utm_source', 'utm_medium', 'utm_campaign', 'ref'].forEach(function (param) {
-     if (params.has(param)) {
-       utmParams.set(param, params.get(param));
+ // Which non-UTM keys to carry as well
+ var EXTRA_KEYS = ['ref', 'gclid', 'fbclid', 'msclkid'];
+ function collectParams(srcSearch) {
+   var src = new URLSearchParams(srcSearch || '');
+   var out = new URLSearchParams();
+   src.forEach(function (v, k) {
+     var key = k.toLowerCase();
+     if ((key.startsWith('utm_') || EXTRA_KEYS.indexOf(key) >= 0) && v) {
+       out.set(k, v);
      }
    });
-   return utmParams.toString();
+   return out;
  }
- function appendUTMParams() {
-   var utmString = getUTMParams();
-   if (!utmString) return;
-   var links = document.querySelectorAll('a[href*="mynutramax.com/register"]');
-   links.forEach(function (link) {
-     try {
-       var url = new URL(link.href);
-       if (url.hostname.includes("mynutramax.com") && url.pathname === "/register") {
-         utmString.split('&').forEach(function (pair) {
-           var parts = pair.split('=');
-           var key = parts[0];
-           var value = parts[1];
-           if (key && value) url.searchParams.set(key, value);
-         });
-         link.href = url.toString();
+ function save(params) {
+   try {
+     if (params && params.toString()) {
+       sessionStorage.setItem('nmx__utm', params.toString());
+     }
+   } catch {}
+ }
+ function load() {
+   try {
+     var s = sessionStorage.getItem('nmx__utm');
+     return s ? new URLSearchParams(s) : new URLSearchParams();
+   } catch { return new URLSearchParams(); }
+ }
+ // Prefer fresh params from URL; fall back to stored
+ var fresh = collectParams(location.search);
+ if (fresh.toString()) save(fresh);
+ var UTM = fresh.toString() ? fresh : load();
+ if (!UTM.toString()) return; // nothing to do
+ function shouldDecorate(url) {
+   try {
+     var u = new URL(url, location.href);
+     return u.hostname.indexOf('mynutramax.com') !== -1;
+   } catch { return false; }
+ }
+ function decorateHref(href) {
+   try {
+     var u = new URL(href, location.href);
+     if (!shouldDecorate(u.href)) return null;
+     // only add keys not already present
+     UTM.forEach(function (v, k) {
+       if (!u.searchParams.has(k)) u.searchParams.set(k, v);
+     });
+     return u.toString();
+   } catch { return null; }
+ }
+ function decorateAnchor(a) {
+   if (!a || !a.getAttribute) return;
+   var href = a.getAttribute('href');
+   if (!href) return;
+   var updated = decorateHref(href);
+   if (updated && updated !== href) a.setAttribute('href', updated);
+ }
+ function scanAll() {
+   document.querySelectorAll('a[href]').forEach(decorateAnchor);
+ }
+ // Initial pass
+ scanAll();
+ // Click-time safety: ensure last-second decoration
+ document.addEventListener('click', function (e) {
+   var t = e.target;
+   if (!(t instanceof Element)) return;
+   var a = t.closest && t.closest('a[href]');
+   if (!a) return;
+   decorateAnchor(a);
+ }, true);
+ // Watch for future DOM changes (hydration, lazy elements, carousels, etc.)
+ var mo = new MutationObserver(function (muts) {
+   muts.forEach(function (m) {
+     m.addedNodes.forEach(function (n) {
+       if (n.nodeType !== 1) return;
+       var el = /** @type {Element} */(n);
+       if (el.matches && el.matches('a[href]')) decorateAnchor(el);
+       if (el.querySelectorAll) {
+         el.querySelectorAll('a[href]').forEach(decorateAnchor);
        }
-     } catch (e) {
-       console.warn("Invalid link found for UTM appending", link.href);
-     }
+     });
    });
- }
- if (document.readyState === "complete" || document.readyState === "interactive") {
-   appendUTMParams();
- } else {
-   document.addEventListener("DOMContentLoaded", appendUTMParams);
- }
+ });
+ mo.observe(document.documentElement, { childList: true, subtree: true });
 })();
-`}
-        </Script>
+`}</Script>
         {/* Children last so overlays/modals can read configs above */}
         {children}
       </body>
