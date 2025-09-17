@@ -222,5 +222,6 @@
   .carousel_navigation_desktop button {
     border: none;
     font-size: clamp(1rem, 2.25vw, 1.25rem);
+    background: white;
   }
 }
