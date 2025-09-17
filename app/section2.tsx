@@ -1,17 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import classes from "./section2.module.css";
 import { animalInfographicOptions } from "./data/data";
-import { useState } from "react";
+import { useState, useMemo } from "react";
+import InfographicSwitcher from "./infographicSwitcher";
 
 const Section2 = () => {
-  const [animal, setAnimal] = useState("dog");
+ const [animal, setAnimal] = useState(animalInfographicOptions[0].id);
 
-  const selectedInfographic = animalInfographicOptions.find(
-    (item) => item.id === animal
-  );
+ const selectedInfographic = useMemo(
+   () => animalInfographicOptions.find((o) => o.id === animal) ?? null,
+   [animal]
+ );
 
   return (
     <div className={classes.section_2}>
@@ -40,36 +41,12 @@ const Section2 = () => {
           Join Our Clinic Staff Program
         </Link>
       </div>
-      <div className={classes.section_2_infographics_container}>
-        {selectedInfographic && (
-          <div className={classes.infographic_img_container}>
-            <Image
-              className={classes.infographic_img}
-              src={selectedInfographic.img}
-              alt={`Infographic of ${selectedInfographic.id}`}
-              fill
-              priority={false}
-              placeholder="blur"
-              blurDataURL="/Dog_Diagram_Blur.png"
-            />
-          </div>
-        )}
-        <fieldset className={classes.animal_radio_group}>
-          <legend>Click below to view difference species:</legend>
-          {animalInfographicOptions.map((item) => (
-            <label key={item.id} className={classes.animal_radio_label}>
-              <input
-                type="radio"
-                name="animal"
-                value={item.id}
-                checked={animal === item.id}
-                onChange={() => setAnimal(item.id)}
-              />
-              {item.id.charAt(0).toUpperCase() + item.id.slice(1)}
-            </label>
-          ))}
-        </fieldset>
-      </div>
+      <InfographicSwitcher
+       selectedInfographic={selectedInfographic}
+       animal={animal}
+       setAnimal={setAnimal}
+       animalInfographicOptions={animalInfographicOptions}
+     />
     </div>
   );
 };
