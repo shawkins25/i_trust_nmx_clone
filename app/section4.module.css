@@ -127,6 +127,7 @@
 
 .carousel_navigation button {
   font-size: clamp(1rem, 2.25vw, 1.25rem);
+  background: white;
   font-weight: 300;
   padding: 0 8px;
   border: none;

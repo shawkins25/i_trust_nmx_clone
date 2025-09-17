@@ -34,13 +34,13 @@ const Section1 = () => {
           We&apos;re Celebrating Being Your Trusted Choice
         </h1>
         <h2>With Prizes For You and Your Clinic</h2>
-        <p>
+        <p className={classes.section_1_text}>
           For over 30 years, Nutramax Laboratories has been committed to
           exceptional quality, rigorous research, and innovative solutions that
           veterinarians trust for their patients. Now, you can experience that
           same trusted quality with your own pets.
         </p>
-        <p>
+        <p className={classes.section_1_text}>
           Now we&apos;re celebrating the trust you put in Nutramax for your
           patients and your own pets with your chance to win an onsite
           celebration for your own clinic, Nutramax swag, products, and more!
@@ -53,6 +53,7 @@ const Section1 = () => {
         >
           ENTER SWEEPSTAKES NOW
         </Link>
+        <p className={classes.small_text}>Submit entries by 11:59pm on September 11</p>
       </div>
       <div className={classes.section_1_video_container}>
         {/* {!showVideo ? (
