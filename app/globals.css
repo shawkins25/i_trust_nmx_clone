@@ -1,6 +1,6 @@
 :root {
   --nmx-green: #006a39;
-  --light-green: #86BB45;
+  --light-green: #86bb45;
   --header-color: #565656;
   --font-color: #606060;
   --white: #ffffff;
@@ -57,7 +57,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 1.75rem); 
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
   font-weight: 600;
 }
 
@@ -74,4 +74,45 @@ h5 {
 
 p {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  white-space: nowrap;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.skipLink {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-120%);
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  z-index: 9999;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
