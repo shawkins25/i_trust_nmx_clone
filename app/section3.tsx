@@ -25,7 +25,7 @@ const Section3 = () => {
           target="_blank"
           aria-label="Learn More About Proviable®"
         >
-          Learn More About Proviable®
+          Learn More About Proviable<sup>®</sup>
         </Link>
       </div>
       <div className={classes.section2}>

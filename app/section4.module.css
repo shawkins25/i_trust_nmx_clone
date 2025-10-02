@@ -24,6 +24,7 @@
 }
 
 .section_4_content_container h3 {
+  color: var(--nmx-green);
   font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: 900;
 }
@@ -57,6 +58,7 @@
   color: var(--nmx-green);
   font-style: italic;
   margin: 0.35rem 0 0.15rem 0;
+  font-weight: 900;
 }
 
 .testimonial_container h5,

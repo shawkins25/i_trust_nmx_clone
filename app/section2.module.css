@@ -34,6 +34,8 @@
 .section_2_content_container h2 {
   font-size: 1.75rem;
   font-weight: 600;
+  color: #006A39;
+  margin: 0 0 5% 0;
 }
 
 .section_2_content_container h4 {
@@ -98,6 +100,7 @@
  text-align: center;
  width: 100%;
  max-width: 750px;
+ padding: 1rem .5rem 2rem .5rem;
 }
 
 /* stage = fixed aspect box that holds the animation layers */
@@ -119,6 +122,25 @@
 /* next/image with fill: control fit on the <img> */
 .infographic_img {
  object-fit: contain; /* or 'cover' if you want edge-to-edge crop */
+}
+
+.infographic_link {
+  font-size: 20px;
+ margin: 0 auto 1rem;
+ text-align: center;
+}
+
+.infographic_link a {
+ font-weight: 600;
+ text-decoration: underline;
+ color: #404EF0;
+}
+
+/* (Optional) ensure the animated layer sits above only the stage, not the caption */
+.infographic_canvas {
+ position: absolute;
+ inset: 0;
+ z-index: 1; /* stays within the stage; the caption is outside anyway */
 }
 
 @media (min-width: 768px) {

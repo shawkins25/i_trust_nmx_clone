@@ -31,7 +31,7 @@ const Section1 = () => {
           priority
         />
         <h1 className={classes.light_green}>
-          We&apos;re Celebrating Being Your Trusted Choice
+          We&apos;re Celebrating Being Your <strong>Trusted</strong> Choice
         </h1>
         <h2>With Prizes For You and Your Clinic</h2>
         <p className={classes.section_1_text}>
@@ -53,7 +53,7 @@ const Section1 = () => {
         >
           ENTER SWEEPSTAKES NOW
         </Link>
-        <p className={classes.small_text}>Submit entries by 11:59pm on September 11</p>
+        {/* <p className={classes.small_text}>Submit entries by 11:59pm on September 11</p> */}
       </div>
       <div className={classes.section_1_video_container}>
         {/* {!showVideo ? (

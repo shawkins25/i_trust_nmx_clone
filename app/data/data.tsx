@@ -97,9 +97,24 @@ export const whyNutramaxIcons = [
 ];
 
 export const animalInfographicOptions = [
-  { id: "dog", img: dogInfographic },
-  { id: "cat", img: catInfographic },
-  { id: "horse", img: horseInfographic },
+  {
+    id: "dog",
+    img: dogInfographic,
+    title: "Explore Dog Products",
+    path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=dog#dog-section",
+  },
+  {
+    id: "cat",
+    img: catInfographic,
+    title: "Explore Cat Products",
+    path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=cat#cat-section",
+  },
+  {
+    id: "horse",
+    img: horseInfographic,
+    title: "Explore Horse Products",
+    path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=horse#horse-section",
+  },
 ];
 
 export const termsLinks = [

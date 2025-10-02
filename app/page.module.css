@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   color: white;
+  font-family: var(--poppins);
   background-color: var(--footer-color);
   width: 100%;
   max-width: 1440px;
@@ -56,10 +57,12 @@
   margin: 5% 0;
 }
 
+.term_item a {
+  font-weight: 400;
+}
+
 /* Medium devices such as tablets (768px and up) */
 @media (min-width: 768px) {
-
-
   .inner_footer_container {
     flex-direction: row;
     margin: 2% auto;

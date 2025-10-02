@@ -56,14 +56,16 @@
   font-size: clamp(2.5rem, 3vw, 2.5rem);
   line-height: clamp(2.75rem, 3vw, 2.75rem);
   margin: 2rem 0 0 0;
-  max-width: 650px;
+  max-width: 500px;
+  font-weight: 500;
 }
 
 .section_1_content_container h2 {
   font-size: clamp(2rem, 3vw, 2rem);
   line-height: clamp(2.25rem, 3vw, 2.25rem);
   margin: 2% auto;
-  max-width: 650px;
+  max-width: 600px;
+   font-weight: 500;
 }
 
 .light_green {

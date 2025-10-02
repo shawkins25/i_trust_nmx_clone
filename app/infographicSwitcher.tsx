@@ -4,14 +4,17 @@ import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import classes from "./section2.module.css";
+import Link from "next/link";
 
-type Option = { id: string; img: StaticImageData };
+type Option = { id: string; img: StaticImageData; title: string; path: string };
+
 type Props = {
   selectedInfographic: Option | null;
   animal: string; // 'dog' | 'cat' | 'horse' (widen if you add more)
   setAnimal: (id: string) => void;
   animalInfographicOptions: Option[];
 };
+
 export default function InfographicSwitcher({
   selectedInfographic,
   animal,
@@ -91,6 +94,11 @@ export default function InfographicSwitcher({
           )}
         </AnimatePresence>
       </div>
+            {selectedInfographic && (
+<div className={classes.infographic_link}>
+<Link href={selectedInfographic.path}>{selectedInfographic.title}</Link>
+</div>
+     )}
       <fieldset className={classes.animal_radio_group}>
         <legend>Click below to view different species:</legend>
         {animalInfographicOptions.map((item) => (

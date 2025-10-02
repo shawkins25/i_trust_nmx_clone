@@ -102,7 +102,7 @@
   min-width: 0;
 }
 .signature_container p {
-  font-size: clamp(0.9rem, 4vw, 1.1rem);
+  font-size: clamp(0.9rem, 5vw, 1.25rem);
 }
 
 .becka_signature_img_container {
@@ -111,12 +111,14 @@
   max-width: 260px;
   aspect-ratio: 4.74;
   margin: 0.5rem 0;
+
 }
+
 .button {
   font-size: 20px;
   color: #1c2d6a;
   background-color: transparent;
-  border: 2px solid #dd2f85;
+  border: 3px solid #dd2f85;
   border-radius: 5px;
   padding: 8px 48px;
   font-weight: 600;
@@ -168,8 +170,8 @@
   }
   .signature_container {
     position: absolute;
-    bottom: 0;
-    right: -75px;
+    bottom: 50px;
+    right: -115px;
     min-width: 275px;
   }
 
