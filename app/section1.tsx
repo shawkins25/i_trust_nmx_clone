@@ -37,8 +37,7 @@ const Section1 = () => {
         <p className={classes.section_1_text}>
           For over 30 years, Nutramax Laboratories has been committed to
           exceptional quality, rigorous research, and innovative solutions that
-          veterinarians trust for their patients. Now, you can experience that
-          same trusted quality with your own pets.
+          veterinarians trust for their patients.
         </p>
         <p className={classes.section_1_text}>
           Now we&apos;re celebrating the trust you put in Nutramax for your
