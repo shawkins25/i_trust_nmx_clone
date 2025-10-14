@@ -1,85 +1,198 @@
-.section_3 {
-    /* position: relative;
-    width: 100%;
-    max-width: 900px;
-    aspect-ratio: 1.003; */
-    position: relative;
-    background-image: url("/CSP_BG.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    max-width: 850px;
-    aspect-ratio: 1.003;
-  }
-  
-  .section_3_content {
-    display: none;
+/* ---------- MOBILE (default) ---------- */
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-white);
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.section1,
+.section2 {
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.section1 {
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.section1 h2 {
+  text-transform: uppercase;
+  color: #dd2f85;
+}
+/* Section 2 stacks image, then quote+signature */
+.section2 {
+  position: relative;
+  flex-direction: column; /* <-- key change for mobile */
+  align-items: center;
+  gap: 1rem;
+}
+/* Image containers */
+.proviable_img_container {
+  position: relative;
+  width: 95%;
+  aspect-ratio: 2;
+  margin: 0.5rem auto;
+}
+.becka_img_container {
+  position: relative;
+  width: 92%; /* give it a nice mobile width */
+  max-width: 650px;
+  aspect-ratio: 1.006;
+  margin: 0 auto;
+}
+/* Quote + signature block should fill width on mobile */
+.quote_and_signature_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 92%;
+  max-width: 800px;
+  position: static; /* no absolute on mobile */
+  margin: 0 auto 1rem auto;
+  padding: 0.5rem 0.25rem;
+}
+/* Let the quote flow; no absolute on mobile */
+.quote {
+  position: static; /* <-- key change */
+  width: auto;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.quote h2 {
+  font-size: clamp(18px, 4.2vw, 28px);
+  font-weight: 500;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+/* Inline quote marks for mobile */
+.openQuote,
+.openQuote_mobile,
+.closeQuote,
+.closeQuote_mobile {
+  position: static; /* <-- no absolute on mobile */
+  font-family: "Rockwell", "Rockwell MT", serif;
+  color: #dd2f85;
+  font-size: clamp(36px, 8vw, 48px);
+  font-weight: 700;
+  line-height: 0.8;
+  vertical-align: baseline;
+}
+.openQuote {
+  display: none;
+}
+.closeQuote {
+  display: none;
+}
+/* Signature stacks under quote on mobile */
+.signature_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: static; /* <-- no absolute on mobile */
+  margin-top: 0.75rem;
+  min-width: 0;
+}
+.signature_container p {
+  font-size: clamp(0.9rem, 5vw, 1.25rem);
+}
+
+.becka_signature_img_container {
+  position: relative;
+  width: 60%;
+  max-width: 260px;
+  aspect-ratio: 4.74;
+  margin: 0.5rem 0;
+
+}
+
+.button {
+  font-size: 20px;
+  color: #1c2d6a;
+  background-color: transparent;
+  border: 3px solid #dd2f85;
+  border-radius: 5px;
+  padding: 8px 48px;
+  font-weight: 600;
+  max-width: 375px;
+  margin: 0 auto;
+}
+/* ---------- DESKTOP (unchanged look) ---------- */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
   }
 
-  @media (min-width: 1280px) {
-    .section_3 {
-        position: relative;
-        background-image: url("/CSP_BG_Desktop_V2.webp");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        max-width: 1215px;
-        aspect-ratio: 3.591;
-      }
-    
-      .section_3_content {
-        font-family: "Barlow Condensed", sans-serif;
-        position: absolute;
-        top: 45px;
-        right: 55px;
-        display: flex;
-        flex-direction: column;
-        align-self: flex-start;
-        color: var(--nmx-green);
-        width: 18%;
-      }
-    
-      .section_3_content h2 {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 32px;
-        line-height: 32px;
-        letter-spacing: 0;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-    
-      .section_3_content h3 {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 30px;
-        line-height: 30px;
-        letter-spacing: 0;
-        font-weight: 400;
-        align-self: flex-end;
-        margin-right: 35px;
-      }
-    
-      .section_3_content h4 {
-        font-family: "Barlow Condensed", sans-serif;
-        font-size: 27px;
-        font-weight: 600;
-      }
-    
-      .sign_up_button {
-        font-family: "Inter", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 0.5rem 1rem;
-        color: var(--white);
-        background-color: var(--nmx-green);
-        border-radius: 3px;
-        width: 90%;
-        font-weight: 700 !important;
-        max-width: 150px;
-        font-size: 1rem;
-        margin: 1rem 0;
-      }
+  .section1 {
+    order: 2;
+    width: 50%;
   }
+
+  .section2 {
+    order: 1;
+    width: 50%;
+    justify-content: flex-end;
+    gap: 0px;
+    align-items: flex-start;
+  }
+
+  .becka_img_container {
+    width: 80%;
+    margin: 0;
+  }
+
+  .quote_and_signature_container {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    position: relative;
+    margin: 0 0 0 auto; /* keep it tucked to the right */
+    padding: 0;
+    max-width: none;
+  }
+  /* Restore your absolute placements for desktop only */
+  .quote {
+    position: absolute;
+    bottom: 400px;
+    right: -70px;
+    width: 400px;
+    text-align: start;
+  }
+  .signature_container {
+    position: absolute;
+    bottom: 50px;
+    right: -115px;
+    min-width: 275px;
+  }
+
+  .openQuote_mobile {
+    display: none;
+  }
+  .closeQuote_mobile {
+    display: none;
+  }
+  .openQuote,
+  .closeQuote {
+    display: flex;
+    position: absolute;
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 1;
+    top: -25px;
+    left: -48px;
+  }
+  .closeQuote {
+    top: 80px;
+    left: 345px;
+  }
+}

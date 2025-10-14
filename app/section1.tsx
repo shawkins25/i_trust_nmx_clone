@@ -1,12 +1,12 @@
-"use client";
+// "use client";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+// import { useState } from "react";
 import classes from "./section1.module.css";
 
 const Section1 = () => {
-  const [showVideo, setShowVideo] = useState(false);
+  // const [showVideo, setShowVideo] = useState(false);
 
   console.log("test");
 
@@ -15,7 +15,7 @@ const Section1 = () => {
       <div className={classes.section_1_bg_img_container}>
         <Image
           className={classes.section_1_bg_img}
-          src="/Section_1_BG_Mobile.webp"
+          src="/Section_1_BG_Mobile_new.webp"
           alt="background image"
           fill
           priority
@@ -32,42 +32,55 @@ const Section1 = () => {
           height={134}
           priority
         />
-        <h1>Discover the Trusted Choice in Veterinary Supplements</h1>
-        <p>
+        <h1 className={classes.light_green}>
+          We&apos;re Celebrating Being Your <strong>Trusted</strong> Choice
+        </h1>
+        <h2>With Prizes For You and Your Clinic</h2>
+        <p className={classes.section_1_text}>
           For over 30 years, Nutramax Laboratories has been committed to
           exceptional quality, rigorous research, and innovative solutions that
-          veterinarians trust for their patients. Now, you can experience that
-          same trusted quality with your own pets.
+          veterinarians trust for their patients.
+        </p>
+        <p className={classes.section_1_text}>
+          Now we&apos;re celebrating the trust you put in Nutramax for your
+          patients and your own pets with your chance to win an onsite
+          celebration for your own clinic, Nutramax swag, products, and more!
         </p>
         <Link
           className={classes.button}
-          href="https://mynutramax.com/register"
+          href="https://contact.mynutramaxlabs.com/i-trust-sweepstakes"
           target="_blank"
-          aria-label="Sign up for our clinic staff program to enjoy 15% off items for your personal pets"
+          aria-label="Enter I Trust Nutramax Sweepstakes now!"
         >
-          Join Our Clinic Staff Program
+          ENTER SWEEPSTAKES NOW
         </Link>
+        {/* <p className={classes.small_text}>Submit entries by 11:59pm on September 11</p> */}
       </div>
       <div className={classes.section_1_video_container}>
-        {!showVideo ? (
+        {/* {!showVideo ? (
           <Image
-            src="/Video_Placeholder.png"
+            src="/i_trust_thumb.png"
             alt="Play Video"
             fill
             priority
             onClick={() => setShowVideo(true)}
             style={{ cursor: "pointer", objectFit: "cover" }}
           />
-        ) : (
-          <iframe
-            src="https://fast.wistia.net/embed/iframe/sgxwp447y5"
-            allow="autoplay; fullscreen"
-            allowFullScreen
-            style={{ width: "100%", height: "100%" }}
-          />
-        )}
+        ) : ( */}
+        <iframe
+          src="https://fast.wistia.net/embed/iframe/k4jnc8u8x8?web_component=true&seo=true"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+          style={{ width: "98.5%", height: "100%" }}
+        />
+        {/* )} */}
       </div>
     </div>
   );
 };
 export default Section1;
+
+{
+  /* <div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><iframe src="https://fast.wistia.net/embed/iframe/k4jnc8u8x8?web_component=true&seo=true" title="NXT_I TRUST NUTRAMAX_2 MIN_R7 Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" width="100%" height="100%"></iframe></div></div>
+<script src="https://fast.wistia.net/player.js" async></script> */
+}

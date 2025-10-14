@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto } from "next/font/google";
+import { Roboto, Poppins } from "next/font/google";
 import Analytics from "./analytics";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
@@ -11,6 +11,15 @@ const roboto = Roboto({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--roboto"
+});
+
+const poppins = Poppins({
+  weight: ["400"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--poppins"
 });
 
 export const metadata: Metadata = {
@@ -21,37 +30,39 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={roboto.className}>
+    <html lang="en" className={`${roboto.className} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* nmxtags replaces separate Facebook / gtag / TTD / LinkedIn scripts */}
-        {React.createElement("nmxtags", {
-          style: { display: "none" },
-          "script-src": "",
-          clarity: "",
-          gtag: "",
-          facebook: "689892560456638",
-          ttd_aid: "",
-          ttd_uid: "p112iqo",
-          ttd_cid: "",
-          linkedin: "7274042",
-        })}
         {/* Google Tag Manager (provided snippet) */}
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-PQH3PZ5G');`}
         </Script>
       </head>
       <body>
         <Analytics />
         <SpeedInsights />
+        {/*
+         Replaces separate Facebook / gtag / TTD / LinkedIn scripts.
+         Must be in BODY and use a hyphenated custom element name.
+         Use data-* attrs so React/TSX passes them through cleanly.
+       */}
+        {React.createElement("nmx-tags", {
+          style: { display: "none" },
+          "data-script-src": "",
+          "data-clarity": "",
+          "data-gtag": "",
+          "data-facebook": "689892560456638",
+          "data-ttd-aid": "",
+          "data-ttd-uid": "p112iqo",
+          "data-ttd-cid": "",
+          "data-linkedin": "7274042",
+        })}
         {/* UTM Tag (KEEPING as requested) */}
         <Script id="utm-propagate" strategy="afterInteractive">{`
 (function () {
@@ -139,12 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
  mo.observe(document.documentElement, { childList: true, subtree: true });
 })();
 `}</Script>
-        {/* Removed:
-           - LinkedIn Insight Tag scripts + noscript pixel
-           - Facebook/Meta Pixel scripts + noscript pixel
-           - Trade Desk loader + init
-           Those are now represented via <nmxtags> and GTM per instructions.
-       */}
+        {/* Children last so overlays/modals can read configs above */}
         {children}
       </body>
     </html>

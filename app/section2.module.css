@@ -1,145 +1,197 @@
 .section_2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
 
-  .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-    color: var(--white);
-    background-color: var(--nmx-green);
-    border-radius: 8px;
-    width: 90%;
-    max-width: 400px;
-    font-size: clamp(1.15rem, 3vw, 1.25rem);
-  }
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: var(--white);
+  background-color: var(--nmx-green);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  font-size: clamp(1.15rem, 3vw, 1.25rem);
+}
 
 .section_2_content_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 90%;
-    margin: 12% auto 5% auto;
-  }
-  
-  .section_2_content_container h2 {
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
-  
-  .section_2_content_container h4 {
-    text-align: start;
-    font-size: 1.25rem;
-    font-weight: 400;
-    margin: 5% auto 3% auto;
-  }
-  
-  .section_2_content_container p {
-    text-align: start;
-    font-size: 1.1rem;
-    line-height: 1.25rem;
-    margin: 0 auto 5% auto;
-  }
-  
-  .section_2_infographics_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    max-width: 750px;
-  }
-  
-  .infographic_img_container {
-    position: relative;
-    width: 95%;
-    aspect-ratio: 1.555;
-    margin: 2rem auto 1rem auto;
-  }
-  
-  .animal_radio_group {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: none;
-    font-size: 1.15rem;
-  }
-  
-  .animal_radio_label {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 2%;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 90%;
+  margin: 12% auto 5% auto;
+}
+
+.section_2_content_container h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #006A39;
+  margin: 0 0 5% 0;
+}
+
+.section_2_content_container h4 {
+  text-align: start;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 5% auto 3% auto;
+}
+
+.section_2_content_container p {
+  text-align: start;
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+  margin: 0 auto 5% auto;
+}
+
+.section_2_infographics_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  max-width: 750px;
+}
+
+.infographic_img_container {
+  position: relative;
+  width: 95%;
+  aspect-ratio: 1.555;
+  margin: 2rem auto 1rem auto;
+}
+
+.animal_radio_group {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  font-size: 1.15rem;
+}
+
+.animal_radio_label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+.button {
+  margin: 12px auto 0 auto;
+}
+
+.section_2_infographics_container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ text-align: center;
+ width: 100%;
+ max-width: 750px;
+ padding: 1rem .5rem 2rem .5rem;
+}
+
+/* stage = fixed aspect box that holds the animation layers */
+.infographic_stage {
+ position: relative;
+ width: 95%;
+ aspect-ratio: 1.555;
+ margin: 2rem auto 1rem auto;
+ overflow: hidden; /* hide the swoosh overflow */
+ border-radius: 8px;
+}
+
+/* each frame/layer sits on top of the stage */
+.infographic_canvas {
+ position: absolute;
+ inset: 0;
+}
+
+/* next/image with fill: control fit on the <img> */
+.infographic_img {
+ object-fit: contain; /* or 'cover' if you want edge-to-edge crop */
+}
+
+.infographic_link {
+  font-size: 20px;
+ margin: 0 auto 1rem;
+ text-align: center;
+}
+
+.infographic_link a {
+ font-weight: 600;
+ text-decoration: underline;
+ color: #404EF0;
+}
+
+/* (Optional) ensure the animated layer sits above only the stage, not the caption */
+.infographic_canvas {
+ position: absolute;
+ inset: 0;
+ z-index: 1; /* stays within the stage; the caption is outside anyway */
+}
 
 @media (min-width: 768px) {
-    .section_2 {
-        width: 90%;
-        margin: 5% 0 2% 0;
-      }
+  .section_2 {
+    width: 90%;
+    margin: 5% 0 2% 0;
+  }
 
-      .infographic_img_container {
-        width: 85%;
-      }
-    
-      .infographic_img_container {
-        margin: 0;
-      }
-    
-      .section_2_content_container {
-        margin: 7% auto;
-      }
-    
-      .section_2_content_container h2 {
-        margin: 3% 0;
-      }
-    
-      .section_2_content_container h4 {
-        margin: 3% auto;
-      }
-    
-      .section_2_content_container p {
-        margin: 3% auto 7% auto;
-      }
-    
-      .section_2_content_container {
-        width: 75%;
-      }
+  .infographic_img_container {
+    width: 85%;
+  }
+
+  .infographic_img_container {
+    margin: 0;
+  }
+
+  .section_2_content_container h2 {
+    margin: 3% 0;
+  }
+
+  .section_2_content_container h4 {
+    margin: 3% auto;
+  }
+
+  .section_2_content_container p {
+    margin: 2% auto;
+  }
+
+  .section_2_content_container {
+    width: 75%;
+  }
 }
 
 @media (min-width: 1024px) {
-    .section_2 {
-        margin: 3% auto;
-      }
-    
-      .section_2_content_container {
-        margin: 3% auto;
-      }
+  .section_2 {
+    margin: 3% auto;
+  }
+
+  .section_2_content_container {
+    margin: 2% auto;
+  }
 }
 
 @media (min-width: 1280px) {
-    .section_2 {
-        flex-direction: row;
-        margin: 0;
-      }
-    
-      .section_2_content_container {
-        margin: 3% auto;
-        align-self: flex-start;
-        align-items: flex-start;
-      }
+  .section_2 {
+    flex-direction: row;
+  }
+
+  .section_2_content_container {
+    margin: 3% auto;
+    align-self: flex-start;
+    align-items: flex-start;
+  }
 }
