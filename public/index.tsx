@@ -4,6 +4,8 @@ import Foti from "./Foti.webp";
 import Glenn from "./Glenn.webp";
 import Hess from "./Hess.webp";
 import Cardenas from "./Cardenas.webp";
+import Edwards from "./Edwards.webp";
+import Medarac from "./Medarac.webp";
 import innovationLogo from "./Innovation_new.webp";
 import trustedLogo from "./Trusted_new.webp";
 import qualityLogo from "./Quality_new.webp";
@@ -21,6 +23,8 @@ export {
   Glenn,
   Hess,
   Cardenas,
+  Edwards,
+  Medarac,
   innovationLogo,
   trustedLogo,
   qualityLogo,

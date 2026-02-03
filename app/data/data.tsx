@@ -5,6 +5,8 @@ import {
   Glenn,
   Hess,
   Cardenas,
+  Edwards,
+  Medarac,
   trustedLogo,
   innovationLogo,
   qualityLogo,
@@ -16,6 +18,20 @@ import {
 } from "../../public";
 
 export const vetProfessionals = [
+  {
+    img: Edwards,
+    name: "Katie Edwards",
+    title: "Office Manager",
+    location: "Apple Grove Veterinary Clinic",
+    quote: "For the pets we take care of, we trust Nutramax.",
+  },
+  {
+    img: Medarac,
+    name: "Kathleen Medarac",
+    title: "DVM",
+    location: "Apple Grove Veterinary Clinic",
+    quote: "As a veterinarian, I trust Nutramax.",
+  },
   {
     img: Cotter,
     name: "Dr. Hailee Cotter",
