@@ -18,8 +18,10 @@ const Section2 = () => {
     <div className={classes.section_2}>
       <div className={classes.section_2_content_container}>
         <h2>Versatile Wellness Support for Pets</h2>
-        <p>Nutramax provides specialized supplements designed to support multiple facets of pet health.
-From joint health to gastrointestinal support, trust Nutramax to support your patients&#8217; well-being.
+        <h4>Nutramax provides specialized supplements designed to support multiple facets of pet health.
+</h4>
+<p>
+  From joint health to gastrointestinal support, trust Nutramax to support your patients&#8217; well-being.
 </p>
         {/* <p>
           Now, through our <strong>Clinic Staff Program</strong>, you can get
