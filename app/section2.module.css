@@ -100,7 +100,7 @@
  text-align: center;
  width: 100%;
  max-width: 750px;
- padding: 1rem .5rem 2rem .5rem;
+ padding: 0 .5rem 2rem .5rem;
 }
 
 /* stage = fixed aspect box that holds the animation layers */
@@ -108,7 +108,7 @@
  position: relative;
  width: 95%;
  aspect-ratio: 1.555;
- margin: 2rem auto 1rem auto;
+ margin: 0 auto;
  overflow: hidden; /* hide the swoosh overflow */
  border-radius: 8px;
 }
@@ -190,7 +190,7 @@
   }
 
   .section_2_content_container {
-    margin: 3% auto;
+    margin: 4% auto;
     align-self: flex-start;
     align-items: flex-start;
   }

@@ -33,7 +33,7 @@ const Section1 = () => {
           priority
         />
         <h1 className={classes.light_green}>
-         Discover the Trusted Choice in Veterinary Supplements
+          Discover the Trusted Choice in Veterinary Supplements
         </h1>
         <p className={classes.section_1_text}>
           For over 30 years, Nutramax Laboratories has been committed to
@@ -41,7 +41,10 @@ const Section1 = () => {
           veterinarians trust for their patients.
         </p>
         <p className={classes.section_1_text}>
-          Now, you can experience that same trusted quality with your own pets.
+          <strong>
+            Now, you can experience that same trusted quality with your own
+            pets.
+          </strong>
         </p>
         <Link
           className={classes.button}
