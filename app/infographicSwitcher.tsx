@@ -26,9 +26,9 @@ export default function InfographicSwitcher({
     () =>
       Math.max(
         0,
-        animalInfographicOptions.findIndex((o) => o.id === animal)
+        animalInfographicOptions.findIndex((o) => o.id === animal),
       ),
-    [animal, animalInfographicOptions]
+    [animal, animalInfographicOptions],
   );
   const [prevIndex, setPrevIndex] = useState(currentIndex);
   const [direction, setDirection] = useState(1); // 1 = forward (right), -1 = backward (left)
@@ -38,7 +38,7 @@ export default function InfographicSwitcher({
   }, []); // initialize once
   const handleChange = (id: string) => {
     const newIndex = animalInfographicOptions.findIndex(
-      (item) => item.id === id
+      (item) => item.id === id,
     );
     setDirection(newIndex > prevIndex ? 1 : -1);
     setPrevIndex(newIndex);
@@ -94,11 +94,13 @@ export default function InfographicSwitcher({
           )}
         </AnimatePresence>
       </div>
-            {selectedInfographic && (
-<div className={classes.infographic_link}>
-<Link href={selectedInfographic.path}>{selectedInfographic.title}</Link>
-</div>
-     )}
+      {selectedInfographic && (
+        <div className={classes.infographic_link}>
+          <Link href={selectedInfographic.path} target="_blank">
+            {selectedInfographic.title}
+          </Link>
+        </div>
+      )}
       <fieldset className={classes.animal_radio_group}>
         <legend>Click below to view different species:</legend>
         {animalInfographicOptions.map((item) => (
