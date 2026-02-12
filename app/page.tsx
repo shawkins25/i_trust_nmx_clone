@@ -4,6 +4,7 @@ import { termsLinks } from "./data/data";
 import dynamic from "next/dynamic";
 
 const Section1 = dynamic(() => import("./section1"), { ssr: true });
+const Section1B = dynamic(() => import("./section1b"), { ssr: true });
 const Section2 = dynamic(() => import("./section2"), { ssr: true });
 const Section3 = dynamic(() => import("./section3"), { ssr: true });
 const Section4 = dynamic(() => import("./section4"), { ssr: true });
@@ -14,6 +15,7 @@ export default function Home() {
     <div className={classes.page}>
       <main className={classes.main}>
         <Section1 />
+        <Section1B />
         <Section2 />
         <Section3 />
         <Section4 />

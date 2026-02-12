@@ -56,25 +56,6 @@ const Section1 = () => {
         </Link>
         {/* <p className={classes.small_text}>Submit entries by 11:59pm on September 11</p> */}
       </div>
-      <div className={classes.section_1_video_container}>
-        {/* {!showVideo ? (
-          <Image
-            src="/i_trust_thumb.png"
-            alt="Play Video"
-            fill
-            priority
-            onClick={() => setShowVideo(true)}
-            style={{ cursor: "pointer", objectFit: "cover" }}
-          />
-        ) : ( */}
-        <iframe
-          src="https://fast.wistia.net/embed/iframe/k4jnc8u8x8?web_component=true&seo=true"
-          allow="autoplay; fullscreen"
-          allowFullScreen
-          style={{ width: "98.5%", height: "100%" }}
-        />
-        {/* )} */}
-      </div>
     </div>
   );
 };
