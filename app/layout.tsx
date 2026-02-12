@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto, Poppins } from "next/font/google";
+import { Roboto, Poppins, Roboto_Condensed} from "next/font/google";
 import Analytics from "./analytics";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Script from "next/script";
 import React from "react";
 
 const roboto = Roboto({
+  weight: ["300", "400", "600", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--roboto"
+});
+
+const roboto_condensed = Roboto_Condensed({
   weight: ["300", "400", "600", "700", "900"],
   style: ["normal", "italic"],
   subsets: ["latin"],
@@ -32,7 +40,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${roboto.className} ${poppins.variable}`}>
+    <html lang="en" className={`${roboto.className} ${roboto_condensed.className} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* Google Tag Manager (provided snippet) */}

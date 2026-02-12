@@ -7,22 +7,22 @@ import { useState, useMemo } from "react";
 import InfographicSwitcher from "./infographicSwitcher";
 
 const Section2 = () => {
- const [animal, setAnimal] = useState(animalInfographicOptions[0].id);
+  const [animal, setAnimal] = useState(animalInfographicOptions[0].id);
 
- const selectedInfographic = useMemo(
-   () => animalInfographicOptions.find((o) => o.id === animal) ?? null,
-   [animal]
- );
+  const selectedInfographic = useMemo(
+    () => animalInfographicOptions.find((o) => o.id === animal) ?? null,
+    [animal],
+  );
 
   return (
     <div className={classes.section_2}>
       <div className={classes.section_2_content_container}>
         <h2>Versatile Wellness Support for Pets</h2>
-        <h4>Nutramax provides specialized supplements designed to support multiple facets of pet health.
-</h4>
-<p>
-  From joint health to gastrointestinal support, trust Nutramax to support your patients&#8217; well-being.
-</p>
+        <p>
+          Nutramax provides specialized supplements designed to support multiple
+          facets of pet health. From joint health to gastrointestinal support,
+          trust Nutramax to support your patients&#8217; well-being.
+        </p>
         {/* <p>
           Now, through our <strong>Clinic Staff Program</strong>, you can get
           exclusive discounts on the same high-quality supplements—for your own
@@ -46,11 +46,11 @@ const Section2 = () => {
         </Link>
       </div>
       <InfographicSwitcher
-       selectedInfographic={selectedInfographic}
-       animal={animal}
-       setAnimal={setAnimal}
-       animalInfographicOptions={animalInfographicOptions}
-     />
+        selectedInfographic={selectedInfographic}
+        animal={animal}
+        setAnimal={setAnimal}
+        animalInfographicOptions={animalInfographicOptions}
+      />
     </div>
   );
 };

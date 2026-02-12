@@ -35,7 +35,8 @@
   font-size: 1.75rem;
   font-weight: 600;
   color: #006A39;
-  margin: 0 0 5% 0;
+  margin: 0 auto 5% auto;
+  text-align: center;
 }
 
 .section_2_content_container h4 {
@@ -46,7 +47,7 @@
 }
 
 .section_2_content_container p {
-  text-align: start;
+  text-align: center;
   font-size: 1.1rem;
   line-height: 1.25rem;
   margin: 0 auto 5% auto;
@@ -100,7 +101,7 @@
  text-align: center;
  width: 100%;
  max-width: 750px;
- padding: 0 .5rem 2rem .5rem;
+ padding: 0 .5rem 0 .5rem;
 }
 
 /* stage = fixed aspect box that holds the animation layers */
@@ -176,7 +177,7 @@
 
 @media (min-width: 1024px) {
   .section_2 {
-    margin: 3% auto;
+    margin: 0 auto 1% auto;
   }
 
   .section_2_content_container {
@@ -191,7 +192,7 @@
 
   .section_2_content_container {
     margin: 4% auto;
-    align-self: flex-start;
-    align-items: flex-start;
+    /* align-self: flex-start;
+    align-items: flex-start; */
   }
 }
