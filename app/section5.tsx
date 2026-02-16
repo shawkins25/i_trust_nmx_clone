@@ -44,7 +44,7 @@ const Section5 = () => {
           easier and more affordable to care for your own pets.
         </p>
         <p>
-          Unlock <strong> 15% savings </strong>on products for your own dogs,
+          Unlock <strong>15% savings </strong>on products for your own dogs,
           cats, and horses, <strong>complimentary shipping</strong> on orders
           over $90, and direct shipping to your front door!
         </p>
