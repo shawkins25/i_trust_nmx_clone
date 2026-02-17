@@ -38,7 +38,7 @@ const Section4 = () => {
 
   return (
     <div id="testimonials" className={classes.section_4}>
-      <div className={classes.section_4_content_container}>
+      <div className={classes.section_4_content_container} id="vet-section">
         <h3>Recommended by Veterinary Professionals</h3>
         <h4>
           Veterinarians don&apos;t just trust Nutramax—they confidently

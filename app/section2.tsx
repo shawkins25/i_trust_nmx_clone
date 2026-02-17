@@ -39,7 +39,7 @@ const Section2 = () => {
         </p> */}
         <Link
           className={classes.button}
-          href="https://mynutramax.com/register"
+          href="/#vet-section"
           aria-label="Join Our Clinic Staff Program!"
         >
           Discover What Vets Are Saying
