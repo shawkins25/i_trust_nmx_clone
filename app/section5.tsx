@@ -50,7 +50,7 @@ const Section5 = () => {
         </p>
         <Link
           className={classes.button}
-          href="https://mynutramax.com/register"
+          href="https://www.mynutramax.com/vet-clinic-staff-program/"
           target="_blank"
           aria-label="Sign up for our clinic staff program to enjoy 15% off items for your personal pets"
         >

@@ -21,7 +21,7 @@ const Section3 = () => {
         </div>
         <Link
           className={classes.button}
-          href="https://mynutramax.com/register"
+          href="https://www.proviable.com/"
           target="_blank"
           aria-label="Learn More About Proviable®"
         >

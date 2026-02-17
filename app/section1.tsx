@@ -48,7 +48,7 @@ const Section1 = () => {
         </p>
         <Link
           className={classes.button}
-          href="https://contact.mynutramaxlabs.com/i-trust-sweepstakes"
+          href="https://www.mynutramax.com/vet-clinic-staff-program/"
           target="_blank"
           aria-label="Enter I Trust Nutramax Sweepstakes now!"
         >
