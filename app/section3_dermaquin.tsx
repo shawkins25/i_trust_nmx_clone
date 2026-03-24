@@ -1,6 +1,6 @@
 import classes from "./section3_dermaquin.module.css";
 import Image from "next/image";
-import img from "../public/dermaquin-group-shot.webp";
+import img from "../public/dermaquin-group-shot_centered.webp";
 import becka_img from "../public/becka_img_2.webp";
 import becka_signature from "../public/becka_signature.png";
 import Link from "next/link";
