@@ -19,6 +19,7 @@ const Section3 = () => {
             priority={false}
           />
         </div>
+        <div className={classes.sign_in_txt}>Sign-in to your account on the MyNutramax dashboard for exclusive Dermaquin<sup>®</sup> content.</div>
         <Link
           className={classes.button}
           href="https://www.mynutramax.com/dashboard/?#resources:dermaquin"
@@ -43,8 +44,7 @@ const Section3 = () => {
             <span className={classes.openQuote}>&ldquo;</span>
             <h2>
               <span className={classes.openQuote_mobile}>&ldquo;</span>
-              Dermaquin<sup>®</sup> is a dependable option in our practice for
-              supporting digestive health.
+              I’ve found Dermaquin<sup>®</sup> to be an excellent option for pets needing skin health support. The combination of ingredients really helps the skin’s natural defenses.
               <span className={classes.closeQuote_mobile}>&rdquo;</span>
             </h2>
             <span className={classes.closeQuote}>&rdquo;</span>

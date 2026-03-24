@@ -24,7 +24,7 @@
 
 .section1 h2 {
   text-transform: uppercase;
-  color: #6CC351;
+  color: #6cc351;
 }
 /* Section 2 stacks image, then quote+signature */
 .section2 {
@@ -67,6 +67,14 @@
   margin-top: 0.5rem;
   text-align: center;
 }
+
+.sign_in_txt {
+  max-width: 350px;
+  margin: 0 auto 0.75rem;
+  text-align: center;
+  font-size: clamp(14px, 1vw, 16px);
+}
+
 .quote h2 {
   font-size: clamp(18px, 4.2vw, 28px);
   font-weight: 500;
@@ -76,16 +84,28 @@
 /* Inline quote marks for mobile */
 .openQuote,
 .openQuote_mobile,
-.closeQuote,
-.closeQuote_mobile {
+.closeQuote {
   position: static; /* <-- no absolute on mobile */
   font-family: "Rockwell", "Rockwell MT", serif;
-  color: #6CC351;
+  color: #6cc351;
   font-size: clamp(36px, 8vw, 48px);
   font-weight: 700;
   line-height: 0.8;
   vertical-align: baseline;
 }
+
+.closeQuote_mobile {
+  position: absolute;
+  font-family: "Rockwell", "Rockwell MT", serif;
+  top: 75%;
+  right: 9%;
+  color: #6cc351;
+  font-size: clamp(36px, 8vw, 48px);
+  font-weight: 700;
+  line-height: 0.8;
+  vertical-align: baseline;
+}
+
 .openQuote {
   display: none;
 }
@@ -112,14 +132,13 @@
   max-width: 260px;
   aspect-ratio: 4.74;
   margin: 0.5rem 0;
-
 }
 
 .button {
   font-size: 20px;
-  color: #6CC351;
+  color: #6cc351;
   background-color: transparent;
-  border: 3px solid #6CC351;
+  border: 3px solid #6cc351;
   border-radius: 5px;
   padding: 8px 48px;
   font-weight: 600;
@@ -193,7 +212,7 @@
     left: -48px;
   }
   .closeQuote {
-    top: 80px;
-    left: 345px;
+    top: 155px;
+    left: 370px;
   }
 }
