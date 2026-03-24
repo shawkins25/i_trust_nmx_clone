@@ -1,3 +1,5 @@
+// \\wsl$\Ubuntu-24.04\home\shawkins\i_trust_nmx\app\analytics.tsx
+
 "use client";
 
 import Script from "next/script";

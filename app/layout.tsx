@@ -1,3 +1,5 @@
+// \\wsl$\Ubuntu-24.04\home\shawkins\i_trust_nmx\app\layout.tsx
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { Roboto, Poppins, Roboto_Condensed} from "next/font/google";
