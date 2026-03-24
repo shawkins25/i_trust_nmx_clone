@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 const Section1 = dynamic(() => import("./section1"), { ssr: true });
 const Section1B = dynamic(() => import("./section1b"), { ssr: true });
 const Section2 = dynamic(() => import("./section2"), { ssr: true });
-const Section3 = dynamic(() => import("./section3_dermaquin"), { ssr: true });
+const Section3 = dynamic(() => import("./section3"), { ssr: true });
 const Section4 = dynamic(() => import("./section4"), { ssr: true });
 const Section5 = dynamic(() => import("./section5"), { ssr: true });
 

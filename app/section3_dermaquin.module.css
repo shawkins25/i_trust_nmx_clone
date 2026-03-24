@@ -180,6 +180,7 @@
     padding: 0;
     max-width: none;
   }
+  
   /* Restore your absolute placements for desktop only */
   .quote {
     position: absolute;
@@ -188,6 +189,7 @@
     width: 400px;
     text-align: start;
   }
+
   .signature_container {
     position: absolute;
     bottom: 50px;
@@ -198,9 +200,11 @@
   .openQuote_mobile {
     display: none;
   }
+
   .closeQuote_mobile {
     display: none;
   }
+
   .openQuote,
   .closeQuote {
     display: flex;
@@ -211,6 +215,7 @@
     top: -25px;
     left: -48px;
   }
+
   .closeQuote {
     top: 155px;
     left: 370px;
