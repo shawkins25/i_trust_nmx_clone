@@ -41,13 +41,13 @@ const Section3 = () => {
         </div>
         <div className={classes.quote_and_signature_container}>
           <div className={classes.quote}>
-            <span className={classes.openQuote}>&ldquo;</span>
+            {/* <span className={classes.openQuote}>&ldquo;</span> */}
             <h2>
-              <span className={classes.openQuote_mobile}>&ldquo;</span>
+              {/* <span className={classes.openQuote_mobile}>&ldquo;</span> */}
               I’ve found Dermaquin<sup>®</sup> to be an excellent option for pets needing skin health support. The combination of ingredients really helps the skin’s natural defenses.
-              <span className={classes.closeQuote_mobile}>&rdquo;</span>
+              {/* <span className={classes.closeQuote_mobile}>&rdquo;</span> */}
             </h2>
-            <span className={classes.closeQuote}>&rdquo;</span>
+            {/* <span className={classes.closeQuote}>&rdquo;</span> */}
           </div>
           <div className={classes.signature_container}>
             <p>Becka Book, CVT</p>

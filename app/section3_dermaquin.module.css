@@ -88,10 +88,10 @@
 }
 
 /* Inline quote marks for mobile */
-.openQuote,
+/* .openQuote,
 .openQuote_mobile,
 .closeQuote {
-  position: static; /* <-- no absolute on mobile */
+  position: static; 
   font-family: "Rockwell", "Rockwell MT", serif;
   color: #6cc351;
   font-size: clamp(36px, 8vw, 48px);
@@ -103,8 +103,8 @@
 .closeQuote_mobile {
   position: absolute;
   font-family: "Rockwell", "Rockwell MT", serif;
-  top: 75%;
-  right: 9%;
+  top: 76%;
+  right: 8%;
   color: #6cc351;
   font-size: clamp(36px, 8vw, 48px);
   font-weight: 700;
@@ -118,7 +118,7 @@
 
 .closeQuote {
   display: none;
-}
+} */
 
 /* Signature stacks under quote on mobile */
 .signature_container {
@@ -154,6 +154,34 @@
   max-width: 375px;
   margin: 0 auto;
 }
+
+.quote {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+}
+
+.quote::before,
+.quote::after {
+  font-family: "Rockwell", "Rockwell MT", serif;
+  color: #6cc351;
+  font-size: clamp(48px, 10vw, 72px);
+  font-weight: 700;
+  line-height: 0;
+  position: absolute;
+}
+
+.quote::before {
+  content: "\201C"; /* left double quote */
+  top: 0.4em;
+  left: 0;
+}
+
+.quote::after {
+  content: "\201D"; /* right double quote */
+  bottom: -0.1em;
+  right: 0;
+}
+
 /* ---------- DESKTOP (unchanged look) ---------- */
 @media (min-width: 1024px) {
   .container {
@@ -164,49 +192,70 @@
 
   .section1 {
     order: 2;
-    width: 45%;
+    width: 35%;
   }
 
   .section2 {
     order: 1;
-    width: 55%;
+    width: 65%;
+    flex-direction: row;
     justify-content: flex-end;
     gap: 0px;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    position: relative;
   }
 
   .becka_img_container {
-    width: 80%;
+    width: 65%;
+    flex-shrink: 0;
     margin: 0;
+    align-self: flex-end;
   }
 
   .quote_and_signature_container {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    width: 35%;
-    position: relative;
-    margin: 0 0 0 auto; /* keep it tucked to the right */
-    padding: 0;
+    justify-content: flex-end;
+    padding: 1.5rem 0 1.5rem 0;
     max-width: none;
+    width: auto;
+    position: static;
+    margin: 0;
   }
 
   /* Restore your absolute placements for desktop only */
   .quote {
-    position: absolute;
-    bottom: 400px;
-    right: -70px;
-    width: 400px;
-    text-align: start;
+    position: static;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    padding: 0.75rem 2rem;
+  }
+
+  .quote::before {
+    font-size: clamp(52px, 4vw, 78px);
+    top: 0.3em;
+    left: -0.2em;
+  }
+
+  .quote::after {
+    font-size: clamp(52px, 4vw, 78px);
+    bottom: 0.1em;
+    right: 0.3em;
+  }
+
+  .quote h2 {
+    font-size: clamp(18px, 1.4vw, 28px);
   }
 
   .signature_container {
-    position: absolute;
-    bottom: 50px;
-    right: -115px;
-    min-width: 275px;
+    position: static;
+    margin-top: 1rem;
+    min-width: 0;
   }
 
-  .openQuote_mobile {
+  /* .openQuote_mobile {
     display: none;
   }
 
@@ -216,17 +265,22 @@
 
   .openQuote,
   .closeQuote {
-    display: flex;
+    display: block;
     position: absolute;
-    font-size: 78px;
+    font-size: clamp(48px, 4vw, 78px);
     font-weight: 700;
     line-height: 1;
-    top: -25px;
-    left: -48px;
+  } */
+
+  /* .openQuote {
+    top: -20px;
+    left: -46px;
   }
 
   .closeQuote {
-    top: 155px;
-    left: 370px;
-  }
+    bottom: -40px;
+    right: 5px;
+    top: auto;
+    left: auto;
+  } */
 }
