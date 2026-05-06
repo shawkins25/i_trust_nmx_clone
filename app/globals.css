@@ -109,6 +109,11 @@ input:focus-visible {
   transform: translateY(0);
 }
 
+sup {
+  font-size: 0.75rem;
+  vertical-align: super;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
