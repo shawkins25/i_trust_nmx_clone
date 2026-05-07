@@ -207,7 +207,7 @@
   .quote::before {
     font-size: clamp(52px, 4vw, 78px);
     top: 0.3em;
-    left: -2em;
+    left: -2.25em;
   }
 
   .quote::after {
