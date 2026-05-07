@@ -81,7 +81,7 @@
 }
 
 .quote h2 {
-  font-size: clamp(18px, 4.2vw, 2px);
+  font-size: clamp(18px, 4.2vw, 28px);
   font-weight: 500;
   line-height: 1.25;
   text-wrap: balance;
