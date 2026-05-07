@@ -214,12 +214,13 @@
   }
 
   .quote h2 {
-    font-size: clamp(18px, 1.4vw, 26px);
+    font-size: clamp(18px, 1.4vw, 30px);
   }
 
   .signature_container {
     position: static;
-    margin-top: 1rem;
+    margin-top: 10rem;
+    align-self: flex-start;
     min-width: 0;
   }
 
