@@ -197,10 +197,10 @@
   /* Restore your absolute placements for desktop only */
   .quote {
     position: static;
-    width: 125%;
+    width: 105%;
     text-align: center;
     position: relative;
-    padding: 0.75rem 0 2rem 0;
+    padding: 0.75rem 0 2rem;
     margin-top: 3rem;
     margin-right: 0;
     /* max-width: 385px; */
@@ -209,7 +209,7 @@
   .quote::before {
     font-size: clamp(52px, 4vw, 78px);
     top: 0.3em;
-    left: -2.25em;
+    left: -2em;
   }
 
   .quote::after {
@@ -219,7 +219,7 @@
   }
 
   .quote h2 {
-    font-size: clamp(18px, 2vw, 34px);
+    font-size: clamp(18px, 1.7vw, 30px);
     text-wrap: wrap;
     position: relative;
     left: -5rem;
