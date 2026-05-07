@@ -215,7 +215,7 @@
   .quote::after {
     font-size: clamp(52px, 4vw, 78px);
     bottom: 0.5em;
-    right: .5em;
+    right: 1em;
   }
 
   .quote h2 {
