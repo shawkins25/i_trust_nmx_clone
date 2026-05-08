@@ -232,33 +232,4 @@
     min-width: 0;
     left: -1rem;
   }
-
-  /* .openQuote_mobile {
-    display: none;
-  }
-
-  .closeQuote_mobile {
-    display: none;
-  }
-
-  .openQuote,
-  .closeQuote {
-    display: block;
-    position: absolute;
-    font-size: clamp(48px, 4vw, 78px);
-    font-weight: 700;
-    line-height: 1;
-  } */
-
-  /* .openQuote {
-    top: -20px;
-    left: -46px;
-  }
-
-  .closeQuote {
-    bottom: -40px;
-    right: 5px;
-    top: auto;
-    left: auto;
-  } */
 }
