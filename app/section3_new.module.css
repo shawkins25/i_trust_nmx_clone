@@ -1,8 +1,5 @@
-/* Mobile-first aspect ratios match the active <picture> source per breakpoint */
 .section {
-  --banner-aspect: 816 / 1056;
   width: 100%;
-  /* background-color: var(--off-white, #f5f5f0); */
   padding: 0;
   margin: 0;
 }
@@ -10,8 +7,6 @@
 .bannerLink {
   display: block;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   line-height: 0;
   text-decoration: none;
 }
@@ -21,34 +16,33 @@
   outline-offset: 4px;
 }
 
-.picture {
+.bannerArt {
   display: block;
   width: 100%;
-}
-
-.bannerImg {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: var(--banner-aspect);
-  object-fit: contain;
-  object-position: center;
+  aspect-ratio: 816 / 1056;
+  background-image: url("/section3/816x1056.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 @media (min-width: 480px) {
-  .section {
-    --banner-aspect: 600 / 400;
+  .bannerArt {
+    aspect-ratio: 600 / 400;
+    background-image: url("/section3/600x400.webp");
   }
 }
 
 @media (min-width: 768px) {
-  .section {
-    --banner-aspect: 1;
+  .bannerArt {
+    aspect-ratio: 1;
+    background-image: url("/section3/800x800.webp");
   }
 }
 
 @media (min-width: 1024px) {
-  .section {
-    --banner-aspect: 940 / 300;
+  .bannerArt {
+    aspect-ratio: 940 / 300;
+    background-image: url("/section3/940x300.webp");
   }
 }
