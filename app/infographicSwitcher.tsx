@@ -2,11 +2,11 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import classes from "./section2.module.css";
 import Link from "next/link";
 
-type Option = { id: string; img: StaticImageData; title: string; path: string };
+type Option = { id: string; img: string; title: string; path: string };
 
 type Props = {
   selectedInfographic: Option | null;
