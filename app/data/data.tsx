@@ -12,9 +12,6 @@ import {
   qualityLogo,
   manufacturingLogo,
   expertiseLogo,
-  dogInfographic,
-  catInfographic,
-  horseInfographic,
 } from "../../public";
 
 export const vetProfessionals = [
@@ -115,19 +112,19 @@ export const whyNutramaxIcons = [
 export const animalInfographicOptions = [
   {
     id: "dog",
-    img: dogInfographic,
+    img: "https://cdn.nutramax.com/itrustnmx/Dog_Diagram.webp",
     title: "Explore Dog Products",
     path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=dog#dog-section",
   },
   {
     id: "cat",
-    img: catInfographic,
+    img: "https://cdn.nutramax.com/itrustnmx/Cat_Diagram.webp",
     title: "Explore Cat Products",
     path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=cat#cat-section",
   },
   {
     id: "horse",
-    img: horseInfographic,
+    img: "https://cdn.nutramax.com/itrustnmx/Horse_Diagram.webp",
     title: "Explore Horse Products",
     path: "https://www.nutramaxlabs.com/our-products/products-for-your-dog-cat-horse?animal=horse#horse-section",
   },

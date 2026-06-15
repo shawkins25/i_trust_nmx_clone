@@ -1,0 +1,48 @@
+.section {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.bannerLink {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.bannerLink:focus-visible {
+  outline: 3px solid #77bc43;
+  outline-offset: 4px;
+}
+
+.bannerArt {
+  display: block;
+  width: 100%;
+  aspect-ratio: 816 / 1056;
+  background-image: url("/section3/816x1056.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+@media (min-width: 480px) {
+  .bannerArt {
+    aspect-ratio: 600 / 400;
+    background-image: url("/section3/600x400.webp");
+  }
+}
+
+@media (min-width: 768px) {
+  .bannerArt {
+    aspect-ratio: 1;
+    background-image: url("/section3/800x800.webp");
+  }
+}
+
+@media (min-width: 1024px) {
+  .bannerArt {
+    aspect-ratio: 940 / 300;
+    background-image: url("/section3/940x300.webp");
+  }
+}

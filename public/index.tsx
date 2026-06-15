@@ -15,6 +15,7 @@ import videoPlaceholder from "./Video_Placeholder.png";
 import dogInfographic from "./Dog_Diagram.webp";
 import catInfographic from "./Cat_Diagram.webp";
 import horseInfographic from "./Horse_Diagram.webp";
+import proviable_img from "./proviable-group-shot-new.webp"
 
 export {
   Cotter, 
@@ -34,4 +35,5 @@ export {
   dogInfographic,
   catInfographic,
   horseInfographic,
+  proviable_img
 };
