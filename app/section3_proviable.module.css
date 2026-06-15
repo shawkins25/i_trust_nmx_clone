@@ -44,9 +44,11 @@
 /* Image containers */
 .proviable_img_container {
   position: relative;
-  width: 95%;
-  aspect-ratio: 2;
-  margin: 0.5rem auto;
+  width: 90%;
+  aspect-ratio: 1.853162;
+  margin: 0.5rem 0;
+  left: 54%;
+  transform: translateX(-50%);
 }
 .becka_img_container {
   position: relative;
@@ -151,6 +153,10 @@
     justify-content: flex-end;
     gap: 0px;
     align-items: flex-start;
+  }
+
+  .proviable_img_container {
+    left: 52%;
   }
 
   .becka_img_container {

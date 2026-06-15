@@ -1,6 +1,7 @@
 import classes from "./section3_proviable.module.css";
 import Image from "next/image";
 import img from "../public/proviable-group-shot.webp";
+import { proviable_img } from "../public/index";
 import becka_img from "../public/becka_img_2.webp";
 import becka_signature from "../public/becka_signature.png";
 import Link from "next/link";
@@ -13,7 +14,7 @@ const Section3 = () => {
         <div className={classes.proviable_img_container}>
           <Image
             className={classes.proviable_img}
-            src={img}
+            src={proviable_img}
             alt={`Image of of Proviable® products`}
             fill
             priority={false}
